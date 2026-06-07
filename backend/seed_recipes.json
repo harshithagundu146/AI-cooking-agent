@@ -1,0 +1,349 @@
+[
+  {
+    "id": "r1",
+    "name": "Paneer Butter Masala",
+    "category": "vegetarian",
+    "cuisine": "Indian",
+    "image": "🧈",
+    "duration": "40 mins",
+    "difficulty": "Medium",
+    "tags": ["spicy", "healthy", "indian", "curry"],
+    "ingredients": ["paneer", "butter", "tomato", "cream", "onion", "garlic", "ginger", "garam masala", "turmeric", "chili powder", "kasuri methi", "salt"],
+    "nutrition": {"calories": 450, "protein": 18, "carbohydrates": 22, "fats": 32, "fiber": 3, "vitamins": "A, C, D, B12", "minerals": "Calcium, Iron, Phosphorus"},
+    "steps": [
+      {"step": 1, "title": "Prepare the Base", "instruction": "Blend 4 tomatoes, 1 onion, 5 cashews, and 2 cloves of garlic into a smooth paste.", "why": "The cashews add creaminess and body to the gravy without using excess cream.", "tip": "Use ripe red tomatoes for a naturally sweet and rich base."},
+      {"step": 2, "title": "Cook the Gravy", "instruction": "Heat 2 tbsp butter in a pan. Add the blended paste and cook on medium heat for 10-12 minutes until oil separates.", "why": "Cooking until oil separates ensures the raw taste of tomatoes is gone and flavors are concentrated.", "tip": "Stir frequently to prevent burning at the bottom."},
+      {"step": 3, "title": "Add Spices", "instruction": "Add 1 tsp garam masala, 1/2 tsp turmeric, 1 tsp chili powder, and salt to taste. Cook for 2 minutes.", "why": "Blooming spices in fat releases their essential oils and deepens flavor.", "tip": "Reduce chili powder if you prefer a milder taste."},
+      {"step": 4, "title": "Add Cream & Paneer", "instruction": "Add 1/4 cup cream and cubed paneer. Simmer for 5-7 minutes on low heat.", "why": "Low heat prevents paneer from becoming rubbery and allows it to absorb flavors.", "tip": "Soak paneer cubes in warm water for 10 mins before adding for extra softness."},
+      {"step": 5, "title": "Finish & Garnish", "instruction": "Add 1 tsp kasuri methi (dried fenugreek leaves), a knob of butter, and garnish with cream.", "why": "Kasuri methi adds an earthy, aromatic finish that defines this dish.", "tip": "Crush kasuri methi between your palms before adding to release maximum aroma."}
+    ]
+  },
+  {
+    "id": "r2",
+    "name": "Vegetable Biryani",
+    "category": "vegetarian",
+    "cuisine": "Indian",
+    "image": "🍚",
+    "duration": "60 mins",
+    "difficulty": "Hard",
+    "tags": ["spicy", "indian", "rice"],
+    "ingredients": ["basmati rice", "mixed vegetables", "onion", "yogurt", "ghee", "biryani masala", "saffron", "mint", "coriander", "ginger", "garlic", "green chili"],
+    "nutrition": {"calories": 380, "protein": 10, "carbohydrates": 58, "fats": 12, "fiber": 5, "vitamins": "A, B6, C, K", "minerals": "Iron, Potassium, Magnesium"},
+    "steps": [
+      {"step": 1, "title": "Soak Rice", "instruction": "Wash and soak 2 cups basmati rice in water for 30 minutes. Parboil with whole spices until 70% cooked.", "why": "Soaking ensures even cooking and prevents breakage. Parboiling means the rice finishes cooking in the dum.", "tip": "Add a few drops of lemon juice to keep rice grains separate and white."},
+      {"step": 2, "title": "Prepare Vegetables", "instruction": "Chop carrots, beans, peas, potatoes, and cauliflower. Fry them lightly in ghee for 5 minutes.", "why": "Light frying seals the vegetables and prevents them from becoming mushy during the dum process.", "tip": "Cut all vegetables to similar sizes for even cooking."},
+      {"step": 3, "title": "Make Masala Base", "instruction": "Fry sliced onions until golden. Add ginger-garlic paste, yogurt, biryani masala, and cook for 8 minutes.", "why": "Golden onions provide the signature sweetness and color to biryani.", "tip": "Patience with onions is key — rush this step and the biryani will lack depth."},
+      {"step": 4, "title": "Layer & Dum Cook", "instruction": "Layer vegetables and rice alternately. Top with saffron milk, mint, coriander, and ghee. Seal and cook on low for 20 minutes.", "why": "Dum cooking (sealed pot) traps steam, allowing flavors to meld and rice to absorb aromatics.", "tip": "Use dough to seal the lid for an authentic dum. No peeking!"},
+      {"step": 5, "title": "Rest & Serve", "instruction": "Let biryani rest for 5 minutes. Gently mix layers and serve with raita.", "why": "Resting allows steam to redistribute, making every grain fluffy and flavorful.", "tip": "Use a flat spatula to mix gently without breaking rice grains."}
+    ]
+  },
+  {
+    "id": "r3",
+    "name": "Chocolate Lava Cake",
+    "category": "vegetarian",
+    "cuisine": "French",
+    "image": "🍫",
+    "duration": "30 mins",
+    "difficulty": "Medium",
+    "tags": ["sweet", "dessert", "french", "fast_food"],
+    "ingredients": ["dark chocolate", "butter", "egg", "sugar", "wheat flour", "vanilla extract", "salt"],
+    "nutrition": {"calories": 520, "protein": 8, "carbohydrates": 48, "fats": 34, "fiber": 2, "vitamins": "A, D, E, K", "minerals": "Iron, Magnesium, Zinc"},
+    "steps": [
+      {"step": 1, "title": "Melt Chocolate & Butter", "instruction": "Melt 200g dark chocolate with 100g butter in a double boiler until smooth.", "why": "A double boiler provides gentle, even heat preventing chocolate from seizing or burning.", "tip": "Use chocolate with at least 70% cocoa for a rich, intense flavor."},
+      {"step": 2, "title": "Mix Wet Ingredients", "instruction": "Whisk 2 eggs with 2 egg yolks and 1/4 cup sugar until thick and pale (about 5 minutes).", "why": "Whisking incorporates air, creating the cake's light texture around the molten center.", "tip": "Room temperature eggs whip up better than cold ones."},
+      {"step": 3, "title": "Combine", "instruction": "Fold the chocolate mixture into the egg mixture. Sift in 2 tbsp flour and a pinch of salt. Fold gently.", "why": "Gentle folding keeps the air in the batter — over-mixing makes the cake dense instead of light.", "tip": "Fold until just combined; a few streaks are okay."},
+      {"step": 4, "title": "Bake", "instruction": "Pour into greased ramekins. Bake at 220°C (425°F) for exactly 12-14 minutes.", "why": "High heat cooks the outside while keeping the center molten — timing is critical here.", "tip": "The cake is done when edges are firm but center jiggles slightly."},
+      {"step": 5, "title": "Serve Immediately", "instruction": "Let cool for 1 minute, run a knife around edges, invert onto a plate. Dust with powdered sugar.", "why": "The molten center will solidify if left too long, so speed is essential.", "tip": "Serve with a scoop of vanilla ice cream for the perfect contrast!"}
+    ]
+  },
+  {
+    "id": "r4",
+    "name": "Butter Chicken",
+    "category": "non-vegetarian",
+    "cuisine": "Indian",
+    "image": "🍗",
+    "duration": "50 mins",
+    "difficulty": "Medium",
+    "tags": ["spicy", "indian", "curry"],
+    "ingredients": ["chicken", "butter", "tomato", "cream", "onion", "garlic", "ginger", "yogurt", "garam masala", "turmeric", "chili powder", "kasuri methi"],
+    "nutrition": {"calories": 490, "protein": 32, "carbohydrates": 18, "fats": 34, "fiber": 2, "vitamins": "A, B6, B12, C, D", "minerals": "Iron, Zinc, Phosphorus"},
+    "steps": [
+      {"step": 1, "title": "Marinate Chicken", "instruction": "Marinate 500g chicken with yogurt, turmeric, chili powder, and salt for at least 30 minutes.", "why": "Yogurt tenderizes the meat while spices penetrate deep for maximum flavor.", "tip": "Marinate overnight in the fridge for the best results."},
+      {"step": 2, "title": "Grill Chicken", "instruction": "Grill or pan-fry marinated chicken pieces until charred and cooked through.", "why": "Charring adds a smoky, tandoori-like flavor that defines butter chicken.", "tip": "Don't move the chicken too often — let it develop a proper sear."},
+      {"step": 3, "title": "Make the Gravy", "instruction": "Blend tomatoes, cashews, and onion. Cook in butter for 15 minutes until thick. Add cream and spices.", "why": "The long cooking time removes the raw tomato acidity and creates a velvety, rich gravy.", "tip": "Strain the gravy through a sieve for a restaurant-quality smooth texture."},
+      {"step": 4, "title": "Combine", "instruction": "Add grilled chicken to the gravy. Simmer on low for 10 minutes.", "why": "Simmering allows the chicken to absorb the gravy flavors and become more tender.", "tip": "Add a splash of water if the gravy gets too thick."},
+      {"step": 5, "title": "Finish", "instruction": "Add kasuri methi, a swirl of cream, and a knob of butter. Serve with naan or rice.", "why": "The final butter adds richness while kasuri methi provides the signature aroma.", "tip": "A squeeze of lemon juice at the end brightens all the flavors beautifully."}
+    ]
+  },
+  {
+    "id": "r5",
+    "name": "Caesar Salad",
+    "category": "vegetarian",
+    "cuisine": "American",
+    "image": "🥗",
+    "duration": "15 mins",
+    "difficulty": "Easy",
+    "tags": ["healthy", "salad", "quick"],
+    "ingredients": ["romaine lettuce", "parmesan cheese", "bread", "olive oil", "lemon juice", "garlic", "mustard", "worcestershire sauce", "egg"],
+    "nutrition": {"calories": 220, "protein": 8, "carbohydrates": 12, "fats": 16, "fiber": 3, "vitamins": "A, C, K, Folate", "minerals": "Calcium, Iron, Potassium"},
+    "steps": [
+      {"step": 1, "title": "Make Croutons", "instruction": "Cut bread into cubes, toss with olive oil, garlic, salt. Bake at 190°C for 10 minutes until golden.", "why": "Homemade croutons are crunchier and more flavorful than store-bought.", "tip": "Toss them halfway through baking for even browning."},
+      {"step": 2, "title": "Prepare Dressing", "instruction": "Whisk together egg yolk, lemon juice, minced garlic, mustard, worcestershire sauce. Slowly drizzle in olive oil while whisking.", "why": "Slowly adding oil creates an emulsion — the creamy, thick texture of Caesar dressing.", "tip": "Use a pasteurized egg if concerned about raw eggs."},
+      {"step": 3, "title": "Assemble", "instruction": "Tear romaine lettuce, toss with dressing, top with croutons and shaved parmesan.", "why": "Tearing lettuce creates more surface area for dressing to cling to than cutting.", "tip": "Chill the lettuce in ice water for 10 mins before serving for extra crunch."}
+    ]
+  },
+  {
+    "id": "r6",
+    "name": "Grilled Salmon",
+    "category": "non-vegetarian",
+    "cuisine": "Mediterranean",
+    "image": "🐟",
+    "duration": "25 mins",
+    "difficulty": "Easy",
+    "tags": ["healthy", "quick", "mediterranean"],
+    "ingredients": ["salmon fillet", "lemon juice", "olive oil", "garlic", "dill", "salt", "black pepper", "butter"],
+    "nutrition": {"calories": 350, "protein": 34, "carbohydrates": 2, "fats": 22, "fiber": 0, "vitamins": "D, B12, B6, E", "minerals": "Selenium, Potassium, Phosphorus"},
+    "steps": [
+      {"step": 1, "title": "Prepare Salmon", "instruction": "Pat salmon dry. Season with salt, pepper, minced garlic, and drizzle with olive oil and lemon juice.", "why": "Patting dry ensures a crispy skin. Moisture is the enemy of a good sear.", "tip": "Let salmon sit at room temperature for 15 minutes before cooking."},
+      {"step": 2, "title": "Grill", "instruction": "Place salmon skin-side down on a hot grill. Cook for 4-5 minutes per side.", "why": "Starting skin-side down protects the flesh and makes the skin crispy.", "tip": "Don't move the fish until it releases naturally from the grill."},
+      {"step": 3, "title": "Serve", "instruction": "Top with fresh dill, a squeeze of lemon, and a pat of butter. Serve with steamed vegetables.", "why": "Butter on hot fish melts into a simple, luxurious sauce.", "tip": "The salmon is done when it flakes easily with a fork but is still slightly translucent in the center."}
+    ]
+  },
+  {
+    "id": "r7",
+    "name": "Mango Lassi",
+    "category": "vegetarian",
+    "cuisine": "Indian",
+    "image": "🥭",
+    "duration": "10 mins",
+    "difficulty": "Easy",
+    "tags": ["sweet", "drink", "healthy", "indian", "quick"],
+    "ingredients": ["mango", "yogurt", "milk", "sugar", "cardamom"],
+    "nutrition": {"calories": 180, "protein": 6, "carbohydrates": 32, "fats": 4, "fiber": 2, "vitamins": "A, C, B6, B12", "minerals": "Calcium, Potassium, Magnesium"},
+    "steps": [
+      {"step": 1, "title": "Blend", "instruction": "Blend 1 ripe mango, 1 cup yogurt, 1/2 cup milk, 2 tbsp sugar, and a pinch of cardamom until smooth.", "why": "Using ripe mango ensures natural sweetness — you may need less sugar.", "tip": "Use frozen mango chunks for a thicker, colder lassi without adding ice."},
+      {"step": 2, "title": "Adjust & Serve", "instruction": "Taste and adjust sweetness. Pour into glasses and garnish with a sprinkle of cardamom or saffron strands.", "why": "Adjusting to taste is important since mango sweetness varies by variety and ripeness.", "tip": "For a richer lassi, use Greek yogurt instead of regular yogurt."}
+    ]
+  },
+  {
+    "id": "r8",
+    "name": "Chicken Biryani",
+    "category": "non-vegetarian",
+    "cuisine": "Indian",
+    "image": "🍛",
+    "duration": "75 mins",
+    "difficulty": "Hard",
+    "tags": ["spicy", "indian", "rice"],
+    "ingredients": ["chicken", "basmati rice", "onion", "yogurt", "ghee", "biryani masala", "saffron", "mint", "coriander", "ginger", "garlic", "green chili"],
+    "nutrition": {"calories": 520, "protein": 28, "carbohydrates": 52, "fats": 22, "fiber": 3, "vitamins": "A, B6, B12, C, K", "minerals": "Iron, Zinc, Potassium, Phosphorus"},
+    "steps": [
+      {"step": 1, "title": "Marinate Chicken", "instruction": "Marinate chicken pieces with yogurt, biryani masala, ginger-garlic paste, salt, and lemon juice for 1 hour.", "why": "Long marination breaks down proteins for tender, flavorful meat that absorbs spices deeply.", "tip": "Score the chicken pieces for better marinade penetration."},
+      {"step": 2, "title": "Prepare Rice", "instruction": "Soak basmati rice for 30 minutes. Parboil with whole spices until 70% cooked. Drain.", "why": "Parboiling ensures the rice finishes perfectly during dum without becoming mushy.", "tip": "The rice should still have a bite in the center — it will finish cooking in steam."},
+      {"step": 3, "title": "Cook Chicken", "instruction": "Fry sliced onions until deep golden. Add marinated chicken and cook for 15 minutes until half done.", "why": "Half-cooking the chicken prevents it from drying out during the long dum process.", "tip": "The onions should be almost caramelized — this is the soul of biryani."},
+      {"step": 4, "title": "Layer & Dum", "instruction": "Layer chicken and rice. Top with saffron milk, mint, fried onions, and ghee. Seal pot tightly, cook on lowest heat for 25 minutes.", "why": "The sealed pot creates a steam chamber where flavors from chicken and rice marry together.", "tip": "Place a tawa (flat pan) under the pot to prevent the bottom from burning."},
+      {"step": 5, "title": "Rest & Serve", "instruction": "Don't open for 5 minutes after turning off heat. Gently mix and serve with raita and salan.", "why": "Resting completes the cooking process and allows the rice to firm up perfectly.", "tip": "Serve from the pot at the table for a dramatic presentation!"}
+    ]
+  },
+  {
+    "id": "r9",
+    "name": "Mushroom Risotto",
+    "category": "vegetarian",
+    "cuisine": "Italian",
+    "image": "🍄",
+    "duration": "45 mins",
+    "difficulty": "Medium",
+    "tags": ["healthy", "italian", "creamy"],
+    "ingredients": ["arborio rice", "mushrooms", "onion", "garlic", "vegetable broth", "parmesan cheese", "butter", "white wine", "olive oil", "thyme"],
+    "nutrition": {"calories": 380, "protein": 12, "carbohydrates": 48, "fats": 16, "fiber": 3, "vitamins": "B2, B3, D, K", "minerals": "Selenium, Iron, Potassium"},
+    "steps": [
+      {"step": 1, "title": "Sauté Mushrooms", "instruction": "Slice mushrooms and sauté in olive oil and butter until golden brown. Season with salt and thyme. Set aside.", "why": "Cooking mushrooms separately ensures they get properly browned instead of steaming in the risotto.", "tip": "Don't stir mushrooms too much — let them develop a golden crust."},
+      {"step": 2, "title": "Toast Rice", "instruction": "In the same pan, sauté diced onion and garlic. Add arborio rice and toast for 2 minutes until edges are translucent.", "why": "Toasting the rice creates a nutty flavor and helps it absorb liquid gradually for the perfect creamy texture.", "tip": "You'll hear the rice start to click against the pan — that's when it's toasted."},
+      {"step": 3, "title": "Add Wine & Broth", "instruction": "Add white wine and stir until absorbed. Then add warm broth one ladle at a time, stirring frequently.", "why": "Gradual addition of warm broth is the key to risotto — it releases starch slowly, creating creaminess.", "tip": "Keep the broth warm in a separate pot. Cold broth shocks the rice and slows cooking."},
+      {"step": 4, "title": "Finish", "instruction": "When rice is al dente (about 18-20 minutes), stir in mushrooms, parmesan, and a knob of butter.", "why": "This final step, called 'mantecatura', creates the signature creamy, wave-like consistency.", "tip": "The risotto should flow like lava when you shake the pan — add more broth if too thick."}
+    ]
+  },
+  {
+    "id": "r10",
+    "name": "Thai Green Curry",
+    "category": "non-vegetarian",
+    "cuisine": "Thai",
+    "image": "🍜",
+    "duration": "35 mins",
+    "difficulty": "Medium",
+    "tags": ["spicy", "thai", "curry", "healthy"],
+    "ingredients": ["chicken", "coconut milk", "green curry paste", "bamboo shoots", "basil", "fish sauce", "sugar", "lime", "bell pepper", "eggplant"],
+    "nutrition": {"calories": 420, "protein": 26, "carbohydrates": 18, "fats": 28, "fiber": 4, "vitamins": "A, C, B6, E", "minerals": "Iron, Potassium, Manganese"},
+    "steps": [
+      {"step": 1, "title": "Bloom Curry Paste", "instruction": "Heat thick coconut cream (top of the can) in a wok. Add 3 tbsp green curry paste and fry for 3 minutes.", "why": "Frying the paste in coconut cream blooms the spices and deepens the curry's flavor complexity.", "tip": "Look for the oil separating from the cream — that's when the paste is properly bloomed."},
+      {"step": 2, "title": "Cook Chicken", "instruction": "Add sliced chicken and cook for 5 minutes until sealed on all sides.", "why": "Sealing the chicken in the paste coats it with flavor from the start.", "tip": "Slice chicken against the grain for more tender pieces."},
+      {"step": 3, "title": "Add Coconut Milk & Vegetables", "instruction": "Pour in remaining coconut milk. Add eggplant, bamboo shoots, and bell pepper. Simmer for 15 minutes.", "why": "Simmering allows vegetables to cook while the coconut milk creates a rich, aromatic broth.", "tip": "Add harder vegetables first, softer ones later to avoid overcooking."},
+      {"step": 4, "title": "Season & Serve", "instruction": "Add fish sauce, sugar, lime juice, and fresh Thai basil. Serve with jasmine rice.", "why": "Thai cuisine balances sweet, salty, sour, and spicy — these final additions achieve that harmony.", "tip": "Add basil leaves at the very end and turn off heat — they wilt perfectly in residual heat."}
+    ]
+  },
+  {
+    "id": "r11",
+    "name": "Palak Paneer",
+    "category": "vegetarian",
+    "cuisine": "Indian",
+    "image": "🥬",
+    "duration": "35 mins",
+    "difficulty": "Easy",
+    "tags": ["healthy", "indian", "spicy"],
+    "ingredients": ["spinach", "paneer", "onion", "garlic", "ginger", "green chili", "cream", "cumin", "garam masala", "turmeric", "salt"],
+    "nutrition": {"calories": 320, "protein": 16, "carbohydrates": 14, "fats": 24, "fiber": 5, "vitamins": "A, C, K, Folate, B12", "minerals": "Iron, Calcium, Magnesium"},
+    "steps": [
+      {"step": 1, "title": "Blanch Spinach", "instruction": "Boil spinach for 2 minutes, then immediately transfer to ice water. Blend into a smooth puree.", "why": "Blanching and shocking preserves the vibrant green color and removes bitterness.", "tip": "Don't over-boil — 2 minutes is plenty. Longer cooking turns spinach olive-drab."},
+      {"step": 2, "title": "Prepare Base", "instruction": "Sauté cumin seeds, then add chopped onion, ginger, garlic, and green chili. Cook until golden.", "why": "This aromatic base provides depth and complexity to the spinach gravy.", "tip": "Cumin should sizzle and turn fragrant — about 30 seconds in hot oil."},
+      {"step": 3, "title": "Combine", "instruction": "Add spinach puree, turmeric, garam masala, and salt. Simmer for 10 minutes.", "why": "Simmering melds the spices into the spinach and concentrates the flavors.", "tip": "Add a pinch of sugar to balance the slight bitterness of spinach."},
+      {"step": 4, "title": "Add Paneer & Finish", "instruction": "Add cubed paneer and cream. Cook for 5 minutes on low heat. Serve with roti or naan.", "why": "Low heat prevents paneer from turning rubbery while absorbing the spinach flavor.", "tip": "For extra flavor, lightly fry paneer cubes before adding to the gravy."}
+    ]
+  },
+  {
+    "id": "r12",
+    "name": "Fish Tacos",
+    "category": "non-vegetarian",
+    "cuisine": "Mexican",
+    "image": "🌮",
+    "duration": "30 mins",
+    "difficulty": "Easy",
+    "tags": ["healthy", "mexican", "quick"],
+    "ingredients": ["fish", "tortillas", "cabbage", "lime juice", "yogurt", "garlic", "chili powder", "cumin", "avocado", "coriander", "salt"],
+    "nutrition": {"calories": 310, "protein": 24, "carbohydrates": 28, "fats": 14, "fiber": 4, "vitamins": "A, C, B12, E", "minerals": "Selenium, Potassium, Iron"},
+    "steps": [
+      {"step": 1, "title": "Season Fish", "instruction": "Season fish fillets with chili powder, cumin, garlic powder, salt, and lime juice. Let sit for 10 minutes.", "why": "The acid in lime juice begins to denature the fish proteins, adding tenderness and flavor.", "tip": "Use a firm white fish like cod or mahi-mahi that won't fall apart."},
+      {"step": 2, "title": "Cook Fish", "instruction": "Pan-fry or grill fish for 3-4 minutes per side until flaky.", "why": "High heat creates a crispy exterior while keeping the interior moist.", "tip": "Don't flip more than once — handle the fish gently."},
+      {"step": 3, "title": "Make Slaw & Sauce", "instruction": "Mix shredded cabbage with lime juice and salt. Blend yogurt, garlic, lime, and coriander for the sauce.", "why": "The crunchy, tangy slaw provides texture contrast to the tender fish.", "tip": "Massage the cabbage with salt to soften it slightly."},
+      {"step": 4, "title": "Assemble", "instruction": "Warm tortillas, add fish, top with slaw, avocado slices, drizzle of sauce, and fresh coriander.", "why": "Layering creates perfect bites where every element is present.", "tip": "Char tortillas directly on a gas flame for authentic flavor and aroma."}
+    ]
+  },
+  {
+    "id": "r13", "name": "Kung Pao Tofu", "category": "vegetarian", "cuisine": "Chinese",
+    "image": "🥢", "duration": "25 mins", "difficulty": "Easy",
+    "tags": ["spicy", "chinese", "healthy", "quick"],
+    "ingredients": ["firm tofu", "peanuts", "dried red chili", "soy sauce", "garlic", "ginger", "scallions", "cornstarch", "sesame oil", "sugar", "rice vinegar", "bell pepper"],
+    "nutrition": {"calories": 320, "protein": 18, "carbohydrates": 22, "fats": 18, "fiber": 3, "vitamins": "B1, C, E", "minerals": "Iron, Calcium"},
+    "steps": [
+      {"step": 1, "title": "Press & Cube Tofu", "instruction": "Press firm tofu 15 mins to remove moisture. Cut into 1-inch cubes and coat in cornstarch.", "why": "Removing moisture lets tofu get crispy when fried.", "tip": "Use a heavy pan on paper towels to press efficiently."},
+      {"step": 2, "title": "Fry Tofu Golden", "instruction": "Heat oil in wok. Fry tofu cubes until golden and crispy on all sides (5-7 mins). Set aside.", "why": "Crispy tofu holds texture when tossed in sauce.", "tip": "Don't crowd the wok — fry in batches."},
+      {"step": 3, "title": "Mix Sauce", "instruction": "Combine soy sauce, rice vinegar, sugar, cornstarch, and sesame oil in a bowl.", "why": "Pre-mixing sauce prevents cornstarch clumping.", "tip": "Taste and adjust sweet-sour balance to your preference."},
+      {"step": 4, "title": "Stir-Fry & Toss", "instruction": "Stir-fry dried chili, garlic, ginger until fragrant. Add bell pepper, scallions, tofu. Pour sauce over and toss. Top with peanuts.", "why": "High heat creates authentic wok hei flavor.", "tip": "Work fast — everything cooks quickly in a hot wok!"}
+    ]
+  },
+  {
+    "id": "r14", "name": "Chicken Fried Rice", "category": "non-vegetarian", "cuisine": "Chinese",
+    "image": "🍳", "duration": "20 mins", "difficulty": "Easy",
+    "tags": ["chinese", "quick", "comfort"],
+    "ingredients": ["cooked day-old rice", "chicken", "eggs", "soy sauce", "garlic", "scallions", "sesame oil", "frozen peas", "carrots", "salt", "white pepper"],
+    "nutrition": {"calories": 420, "protein": 28, "carbohydrates": 52, "fats": 14, "fiber": 3, "vitamins": "A, B12, D", "minerals": "Iron, Selenium"},
+    "steps": [
+      {"step": 1, "title": "Use Cold Rice", "instruction": "Use day-old refrigerated rice. Break up any clumps with your hands before cooking.", "why": "Cold dry rice fries better — fresh rice is too moist and becomes sticky.", "tip": "Cook extra rice the night before specifically for fried rice."},
+      {"step": 2, "title": "Cook Chicken & Eggs", "instruction": "Stir-fry diced chicken until cooked. Push aside, scramble eggs in the same wok until just set.", "why": "Cooking separately ensures properly textured chicken and fluffy eggs.", "tip": "Eggs should be slightly underdone — they'll finish with the rice."},
+      {"step": 3, "title": "Stir-Fry Everything", "instruction": "Add garlic, carrots, peas, and rice. Toss continuously on high heat for 3-4 minutes.", "why": "Constant tossing ensures even heat and prevents burning.", "tip": "A carbon steel wok gets much hotter — ideal for fried rice."},
+      {"step": 4, "title": "Season & Serve", "instruction": "Add soy sauce, sesame oil, white pepper. Toss with chicken, eggs, and scallions. Serve immediately.", "why": "Adding soy sauce last prevents burning and preserves its complex flavor.", "tip": "A little sesame oil goes a long way — use it as a finishing oil only."}
+    ]
+  },
+  {
+    "id": "r15", "name": "Vegetable Bibimbap", "category": "vegetarian", "cuisine": "Korean",
+    "image": "🥗", "duration": "40 mins", "difficulty": "Medium",
+    "tags": ["korean", "healthy", "colorful"],
+    "ingredients": ["steamed rice", "spinach", "carrots", "bean sprouts", "mushrooms", "zucchini", "sesame oil", "soy sauce", "gochujang", "garlic", "sesame seeds", "fried egg"],
+    "nutrition": {"calories": 420, "protein": 14, "carbohydrates": 62, "fats": 14, "fiber": 6, "vitamins": "A, C, K, B6", "minerals": "Iron, Potassium, Calcium"},
+    "steps": [
+      {"step": 1, "title": "Prep Each Vegetable", "instruction": "Sauté each vegetable separately: spinach with garlic & sesame oil; julienned carrots; mushrooms in soy sauce; zucchini sliced thin.", "why": "Cooking each vegetable separately keeps distinct textures and flavors.", "tip": "Blanch spinach 1 min, shock in cold water, then squeeze out excess moisture."},
+      {"step": 2, "title": "Make Gochujang Sauce", "instruction": "Mix 2 tbsp gochujang, 1 tbsp sesame oil, 1 tbsp sugar, 1 tbsp soy sauce, 1 tsp garlic, 1 tbsp water.", "why": "The sauce balances sweet, spicy, and savory — the heart of bibimbap.", "tip": "Adjust gochujang quantity based on your spice preference."},
+      {"step": 3, "title": "Fry Egg Sunny-Side", "instruction": "Fry an egg in sesame oil keeping the yolk runny.", "why": "The runny yolk acts as a natural sauce binding all ingredients when mixed.", "tip": "Cover the pan briefly to set whites while keeping yolk runny."},
+      {"step": 4, "title": "Assemble & Mix", "instruction": "Place rice in bowl. Arrange vegetables in sections. Top with egg and gochujang sauce. Mix everything together before eating!", "why": "Mixing is fundamental — the name literally means 'mixed rice'.", "tip": "Serve in a hot stone bowl for crispy rice bottom — the best part!"}
+    ]
+  },
+  {
+    "id": "r16", "name": "Korean Fried Chicken", "category": "non-vegetarian", "cuisine": "Korean",
+    "image": "🍗", "duration": "45 mins", "difficulty": "Medium",
+    "tags": ["korean", "spicy", "crispy"],
+    "ingredients": ["chicken wings", "flour", "cornstarch", "gochujang", "soy sauce", "honey", "garlic", "ginger", "sesame seeds", "scallions", "vegetable oil", "baking powder"],
+    "nutrition": {"calories": 480, "protein": 28, "carbohydrates": 38, "fats": 22, "fiber": 1, "vitamins": "B6, B12, D", "minerals": "Iron, Zinc, Selenium"},
+    "steps": [
+      {"step": 1, "title": "Double-Coat Chicken", "instruction": "Mix flour, cornstarch, baking powder, salt. Dip chicken in dry mix, briefly in water, then dry mix again.", "why": "Double-coating creates the ultra-thin, extra-crispy Korean fried chicken crust.", "tip": "Baking powder creates air bubbles for extra lightness."},
+      {"step": 2, "title": "Double Fry", "instruction": "First fry at 160°C for 8-10 mins until pale. Rest 5 mins, then fry again at 180°C for 3-4 mins until golden.", "why": "Double frying — the Korean secret — first cooks it through, second creates exceptional crunch.", "tip": "Don't skip the resting period — steam evaporates making it crispier."},
+      {"step": 3, "title": "Make Glaze", "instruction": "Simmer gochujang, soy sauce, honey, garlic, and ginger in a pan for 3 minutes until slightly thickened.", "why": "The sauce should be thick enough to coat without making chicken soggy.", "tip": "Sauce can be made ahead and stored refrigerated for up to a week."},
+      {"step": 4, "title": "Coat & Garnish", "instruction": "Toss fried chicken in sauce immediately. Garnish with sesame seeds and scallions. Serve right away.", "why": "Coating immediately keeps the exterior as crispy as possible.", "tip": "Serve with pickled daikon — a classic Korean pairing that cuts the richness."}
+    ]
+  },
+  {
+    "id": "r17", "name": "Miso Veggie Ramen", "category": "vegetarian", "cuisine": "Japanese",
+    "image": "🍜", "duration": "30 mins", "difficulty": "Medium",
+    "tags": ["japanese", "healthy", "comfort"],
+    "ingredients": ["ramen noodles", "vegetable broth", "miso paste", "soy sauce", "corn", "bamboo shoots", "nori", "soft-boiled egg", "mushrooms", "scallions", "sesame oil", "garlic", "ginger"],
+    "nutrition": {"calories": 350, "protein": 16, "carbohydrates": 52, "fats": 10, "fiber": 5, "vitamins": "B2, D, K, Folate", "minerals": "Iron, Potassium, Magnesium"},
+    "steps": [
+      {"step": 1, "title": "Make Tare Sauce", "instruction": "Mix miso paste, soy sauce, sesame oil, and mirin. This concentrated base seasons each bowl.", "why": "A good tare is the backbone of ramen — it allows personalized seasoning.", "tip": "Extra tare keeps refrigerated for a month and elevates any soup."},
+      {"step": 2, "title": "Build Broth", "instruction": "Sauté garlic and ginger. Add vegetable broth, simmer 15 mins. Stir in 2 tbsp tare per serving.", "why": "Simmering integrates the tare flavors into the broth.", "tip": "Don't boil after adding miso — high heat destroys its probiotics and delicate flavor."},
+      {"step": 3, "title": "Soft-Boil Eggs", "instruction": "Boil eggs exactly 6.5 minutes. Ice bath immediately. Peel and marinate in soy sauce + mirin 30 mins.", "why": "Precise timing gives the perfect jammy, orange yolk.", "tip": "The soy marinade gives eggs a beautiful amber color and savory-sweet taste."},
+      {"step": 4, "title": "Cook Noodles & Assemble", "instruction": "Cook ramen noodles separately. Place in bowl, pour hot broth. Top with mushrooms, corn, bamboo shoots, nori, egg, and scallions.", "why": "Separate noodle cooking prevents them absorbing too much broth and going mushy.", "tip": "Toss noodles in sesame oil before plating to prevent sticking."}
+    ]
+  },
+  {
+    "id": "r18", "name": "Teriyaki Chicken", "category": "non-vegetarian", "cuisine": "Japanese",
+    "image": "🍱", "duration": "30 mins", "difficulty": "Easy",
+    "tags": ["japanese", "healthy", "sweet", "quick"],
+    "ingredients": ["chicken thighs", "soy sauce", "mirin", "sake", "sugar", "garlic", "ginger", "sesame seeds", "scallions", "vegetable oil", "steamed rice"],
+    "nutrition": {"calories": 390, "protein": 32, "carbohydrates": 28, "fats": 14, "fiber": 1, "vitamins": "B6, B12, D", "minerals": "Iron, Zinc, Potassium"},
+    "steps": [
+      {"step": 1, "title": "Make Teriyaki Sauce", "instruction": "Combine soy sauce, mirin, sake, and sugar. Stir until sugar dissolves. Add minced garlic and ginger.", "why": "The balance of sweet, salty, and umami is the essence of teriyaki.", "tip": "Use real mirin (not mirin-style seasoning) for authentic flavor."},
+      {"step": 2, "title": "Sear Chicken", "instruction": "Pat chicken dry. Sear skin-side down in oil over medium-high heat for 5-6 mins until golden. Flip and cook 3-4 mins.", "why": "Patting dry and searing skin-side first creates crispy skin and locks in juices.", "tip": "Don't move the chicken — let it develop a proper sear."},
+      {"step": 3, "title": "Glaze with Sauce", "instruction": "Pour teriyaki sauce over chicken. Cook on medium heat, turning and basting every minute until sauce thickens and coats chicken (5-6 mins).", "why": "The sauce reduces and caramelizes, creating the signature glossy teriyaki glaze.", "tip": "Watch carefully — the sugars in the sauce can burn quickly on high heat."},
+      {"step": 4, "title": "Rest & Serve", "instruction": "Rest chicken 2-3 mins. Slice against the grain. Serve over steamed rice. Garnish with sesame seeds and scallions.", "why": "Resting lets juices redistribute for a more tender, juicy result.", "tip": "Drizzle any remaining pan sauce over the sliced chicken and rice."}
+    ]
+  },
+  {
+    "id": "r19", "name": "Creamy Mac & Cheese", "category": "vegetarian", "cuisine": "American",
+    "image": "🧀", "duration": "25 mins", "difficulty": "Easy",
+    "tags": ["american", "comfort", "fast_food", "sweet"],
+    "ingredients": ["macaroni pasta", "cheddar cheese", "milk", "butter", "flour", "mustard powder", "paprika", "garlic powder", "salt", "black pepper", "breadcrumbs"],
+    "nutrition": {"calories": 520, "protein": 20, "carbohydrates": 58, "fats": 24, "fiber": 2, "vitamins": "A, B12, D", "minerals": "Calcium, Phosphorus, Zinc"},
+    "steps": [
+      {"step": 1, "title": "Cook Pasta", "instruction": "Cook macaroni in salted boiling water until al dente (1 min less than package time). Reserve 1 cup pasta water. Drain.", "why": "Al dente pasta won't go mushy when baked in sauce.", "tip": "Salting pasta water generously is your only chance to season the pasta itself."},
+      {"step": 2, "title": "Make Roux", "instruction": "Melt butter in saucepan. Add flour and cook stirring for 1-2 mins until light golden.", "why": "Cooking the flour removes the raw taste and thickens the sauce without clumping.", "tip": "The roux should smell nutty, not raw — that's your cue it's ready."},
+      {"step": 3, "title": "Build Cheese Sauce", "instruction": "Gradually whisk in warm milk. Cook until thick. Remove from heat. Add mustard, paprika, garlic powder, then stir in cheese until melted.", "why": "Removing from heat before adding cheese prevents a grainy sauce.", "tip": "Grate cheese yourself — pre-shredded has anti-caking agents that prevent smooth melting."},
+      {"step": 4, "title": "Combine & Top", "instruction": "Fold in pasta. Transfer to baking dish. Top with breadcrumbs and extra cheese. Broil 3-4 mins until golden and bubbly.", "why": "Broiling creates an irresistible golden crust with a creamy interior.", "tip": "Watch the broiler closely — it goes from perfect to burnt in seconds!"}
+    ]
+  },
+  {
+    "id": "r20", "name": "BBQ Pulled Chicken Sandwich", "category": "non-vegetarian", "cuisine": "American",
+    "image": "🍔", "duration": "50 mins", "difficulty": "Easy",
+    "tags": ["american", "comfort", "fast_food"],
+    "ingredients": ["chicken thighs", "BBQ sauce", "brioche buns", "coleslaw mix", "apple cider vinegar", "brown sugar", "smoked paprika", "garlic powder", "onion powder", "salt", "mayonnaise"],
+    "nutrition": {"calories": 560, "protein": 36, "carbohydrates": 52, "fats": 22, "fiber": 3, "vitamins": "B6, B12, C", "minerals": "Iron, Zinc, Potassium"},
+    "steps": [
+      {"step": 1, "title": "Season Chicken", "instruction": "Rub chicken thighs with smoked paprika, garlic powder, onion powder, brown sugar, and salt. Let sit 15 mins.", "why": "A dry rub penetrates the meat and creates a flavorful bark when cooked.", "tip": "The longer you marinate, the deeper the flavor — overnight is ideal."},
+      {"step": 2, "title": "Cook Low & Slow", "instruction": "Bake seasoned chicken at 165°C (325°F) for 35-40 mins until very tender and easily shredded.", "why": "Low slow heat breaks down collagen, making the chicken pull apart effortlessly.", "tip": "Chicken is done when you can shred it with two forks without resistance."},
+      {"step": 3, "title": "Pull & Sauce", "instruction": "Shred chicken with two forks. Toss generously with BBQ sauce and a splash of apple cider vinegar.", "why": "Vinegar brightens the rich BBQ sauce and keeps pulled chicken moist.", "tip": "Warm the sauced chicken in a pan briefly to caramelize the sugars in the BBQ sauce."},
+      {"step": 4, "title": "Build Sandwich", "instruction": "Toast brioche buns. Pile high with pulled chicken. Top with creamy coleslaw and extra BBQ sauce.", "why": "Coleslaw adds crunch and cooling creaminess to balance the smoky, saucy chicken.", "tip": "Don't skip toasting the buns — it prevents them from getting soggy."}
+    ]
+  },
+  {
+    "id": "r21", "name": "Pasta Primavera", "category": "vegetarian", "cuisine": "Continental",
+    "image": "🍝", "duration": "30 mins", "difficulty": "Easy",
+    "tags": ["continental", "healthy", "italian", "quick"],
+    "ingredients": ["penne pasta", "zucchini", "cherry tomatoes", "bell peppers", "asparagus", "garlic", "olive oil", "parmesan cheese", "fresh basil", "lemon juice", "salt", "black pepper"],
+    "nutrition": {"calories": 380, "protein": 14, "carbohydrates": 58, "fats": 12, "fiber": 6, "vitamins": "A, C, K, Folate", "minerals": "Calcium, Iron, Potassium"},
+    "steps": [
+      {"step": 1, "title": "Cook Pasta", "instruction": "Cook penne in heavily salted water until al dente. Reserve 1 cup pasta water. Drain.", "why": "Pasta water contains starch that helps sauce cling to pasta.", "tip": "Salt pasta water generously — it should taste pleasantly salty."},
+      {"step": 2, "title": "Sauté Vegetables", "instruction": "Heat olive oil over high heat. Add garlic, then vegetables in order of hardness (asparagus first, tomatoes last). Cook 6-8 mins total.", "why": "High heat quickly caramelizes vegetables while keeping them crisp and vibrant.", "tip": "Add the tomatoes last — they only need 1-2 mins to blister."},
+      {"step": 3, "title": "Combine", "instruction": "Add drained pasta to vegetables. Splash in pasta water and toss vigorously over heat for 2 mins.", "why": "Pasta water starch emulsifies with olive oil to create a light, glossy sauce.", "tip": "Add pasta water gradually — you may not need all of it."},
+      {"step": 4, "title": "Finish & Serve", "instruction": "Remove from heat. Add lemon juice, fresh basil, and generous parmesan. Toss and serve immediately.", "why": "Lemon brightens flavors; basil and parmesan added off heat preserve their fresh character.", "tip": "Quality parmesan makes a huge difference — use freshly grated Parmigiano-Reggiano."}
+    ]
+  },
+  {
+    "id": "r22", "name": "Chicken Marsala", "category": "non-vegetarian", "cuisine": "Continental",
+    "image": "🍷", "duration": "35 mins", "difficulty": "Medium",
+    "tags": ["continental", "italian", "comfort", "creamy"],
+    "ingredients": ["chicken breast", "Marsala wine", "mushrooms", "shallots", "garlic", "chicken broth", "cream", "butter", "flour", "olive oil", "fresh thyme", "parsley", "salt", "black pepper"],
+    "nutrition": {"calories": 460, "protein": 34, "carbohydrates": 18, "fats": 26, "fiber": 2, "vitamins": "B6, B12, D", "minerals": "Iron, Zinc, Potassium"},
+    "steps": [
+      {"step": 1, "title": "Pound & Dredge Chicken", "instruction": "Pound chicken breasts to even thickness (1cm). Season and dredge lightly in flour, shaking off excess.", "why": "Even thickness ensures uniform cooking. Flour creates a golden crust and thickens the sauce.", "tip": "Don't flour the chicken until just before cooking or it becomes gummy."},
+      {"step": 2, "title": "Sear Chicken", "instruction": "Heat olive oil and butter in a skillet over high heat. Sear chicken 3-4 mins per side until golden. Remove and set aside.", "why": "Hard searing develops the fond (browned bits) that give the Marsala sauce its depth.", "tip": "Don't crowd the pan — sear in batches if needed for a proper crust."},
+      {"step": 3, "title": "Make Marsala Sauce", "instruction": "In same pan sauté shallots, garlic, mushrooms. Add Marsala wine and reduce by half (3-4 mins). Add broth and cream, simmer until slightly thickened.", "why": "Deglazing with wine picks up the fond and forms the base of the rich sauce.", "tip": "Real Marsala wine (not 'cooking wine') makes an enormous flavor difference."},
+      {"step": 4, "title": "Finish & Serve", "instruction": "Return chicken to pan, spoon sauce over, simmer gently 5 mins. Finish with cold butter swirled in. Garnish with parsley.", "why": "Swirling cold butter (monter au beurre) gives the sauce a silky, restaurant-quality finish.", "tip": "Serve immediately with mashed potatoes, pasta, or crusty bread to soak up the sauce."}
+    ]
+  }
+]

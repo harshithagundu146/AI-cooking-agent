@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Cooking Agent - Your intelligent AI-powered cooking assistant for personalized recipes, ingredient substitution, and nutritional guidance.">
+    <title>AI Cooking Agent — Your Smart Kitchen Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Decorative food border elements -->
+    <div class="food-border food-border-top"></div>
+    <div class="food-border food-border-bottom"></div>
+    <div class="food-border food-border-left"></div>
+    <div class="food-border food-border-right"></div>
+
+    <!-- ===== LANDING PAGE ===== -->
+    <section id="landing-page" class="page active">
+        <div class="landing-container">
+            <div class="floating-foods">
+                <span class="float-item" style="--delay:0s;--x:10%;--y:15%">🥑</span>
+                <span class="float-item" style="--delay:0.5s;--x:85%;--y:10%">🍅</span>
+                <span class="float-item" style="--delay:1s;--x:5%;--y:70%">🥕</span>
+                <span class="float-item" style="--delay:1.5s;--x:90%;--y:65%">🫑</span>
+                <span class="float-item" style="--delay:2s;--x:15%;--y:45%">🍋</span>
+                <span class="float-item" style="--delay:2.5s;--x:80%;--y:40%">🧅</span>
+                <span class="float-item" style="--delay:0.3s;--x:50%;--y:5%">🌽</span>
+                <span class="float-item" style="--delay:1.2s;--x:70%;--y:80%">🍆</span>
+                <span class="float-item" style="--delay:1.8s;--x:25%;--y:85%">🥦</span>
+                <span class="float-item" style="--delay:0.7s;--x:60%;--y:20%">🍊</span>
+            </div>
+            <div class="ai-robot" aria-hidden="true">
+                <div class="robot-body">
+                    <div class="robot-head">
+                        <div class="robot-eye left"></div>
+                        <div class="robot-eye right"></div>
+                        <div class="robot-mouth"></div>
+                        <div class="robot-antenna"></div>
+                    </div>
+                    <div class="robot-torso">
+                        <span class="robot-chef-hat">👨‍🍳</span>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-area">
+                <div class="logo-top">AI</div>
+                <div class="logo-cooking">
+                    <span class="pan-icon">🍳</span>
+                    <span class="cooking-text">Cooking</span>
+                    <span class="pan-icon flip">🍳</span>
+                </div>
+                <div class="logo-bottom">Agent</div>
+                <p class="tagline">Your Intelligent Kitchen Companion</p>
+            </div>
+            <button id="start-btn" class="btn btn-primary btn-glow" onclick="navigateTo('auth-page')">
+                <span>START</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== AUTH PAGE ===== -->
+    <section id="auth-page" class="page">
+        <div class="auth-container glass-card">
+            <div class="auth-header">
+                <span class="auth-logo">🍳 AI Cooking Agent</span>
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="switchAuthTab('login', event)">Login</button>
+                    <button class="tab-btn" onclick="switchAuthTab('register', event)">Register</button>
+                </div>
+            </div>
+            <form id="login-form" class="auth-form" onsubmit="handleLogin(event)">
+                <div class="input-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+                <p class="auth-message" id="login-message"></p>
+            </form>
+            <form id="register-form" class="auth-form hidden" onsubmit="handleRegister(event)">
+                <div class="input-group">
+                    <label for="reg-username">Username</label>
+                    <input type="text" id="reg-username" placeholder="Choose a username" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" placeholder="Create a password" required minlength="6">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <p class="auth-message" id="register-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== CATEGORY SELECTION ===== -->
+    <section id="category-page" class="page">
+        <div class="category-container">
+            <h1 class="section-title">What's Your Preference?</h1>
+            <p class="section-subtitle">Choose your food category to get personalized recipes</p>
+            <div class="category-cards">
+                <button class="category-card veg" onclick="selectCategory('vegetarian')">
+                    <div class="category-icon">🥬</div>
+                    <h2>Vegetarian</h2>
+                    <p>Plant-based goodness, wholesome flavors</p>
+                    <div class="category-foods">🥗🍲🥘🫕🥙</div>
+                </button>
+                <button class="category-card nonveg" onclick="selectCategory('non-vegetarian')">
+                    <div class="category-icon">🍗</div>
+                    <h2>Non-Vegetarian</h2>
+                    <p>Rich proteins, bold & savory dishes</p>
+                    <div class="category-foods">🥩🍖🐟🍤🌮</div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PREFERENCE ONBOARDING ===== -->
+    <section id="preferences-page" class="page">
+        <div class="pref-container glass-card">
+            <h1 class="section-title">Let's Personalize Your Experience</h1>
+            <p class="section-subtitle">Answer a few questions so I can recommend the best recipes for you!</p>
+            <div id="pref-steps">
+                <div class="pref-step active" data-step="1">
+                    <h2>🌶️ Spice Level</h2>
+                    <p>Do you prefer spicy or mild food?</p>
+                    <div class="pref-options">
+                        <button class="pref-btn" onclick="setPref('spice_preference','mild')">😌 Mild</button>
+                        <button class="pref-btn" onclick="setPref('spice_preference','medium')">🌶️ Medium</button>
+                        <button class="pref-btn" onclick="setPref('spice_preference','spicy')">🔥 Spicy</button>
+                    </div>
+                </div>
+                <div class="pref-step" data-step="2">
+                    <h2>😋 Taste</h2>
+                    <p>Do you prefer sweet or savory dishes?</p>
+                    <div class="pref-options">
+                        <button class="pref-btn" onclick="setPref('taste_preference','sweet')">🍰 Sweet</button>
+                        <button class="pref-btn" onclick="setPref('taste_preference','savory')">🧂 Savory</button>
+                        <button class="pref-btn" onclick="setPref('taste_preference','both')">🤤 Both!</button>
+                    </div>
+                </div>
+                <div class="pref-step" data-step="3">
+                    <h2>🌍 Cuisine</h2>
+                    <p>Which cuisines do you enjoy most?</p>
+                    <div class="pref-options cuisine-grid">
+                        <button class="pref-btn" onclick="setPref('cuisine_preference','indian')">🇮🇳 Indian</button>
+                        <button class="pref-btn" onclick="setPref('cuisine_preference','italian')">🇮🇹 Italian</button>
+                        <button class="pref-btn" onclick="setPref('cuisine_preference','mexican')">🇲🇽 Mexican</button>
+                        <button class="pref-btn" onclick="setPref('cuisine_preference','thai')">🇹🇭 Thai</button>
+                        <button class="pref-btn" onclick="setPref('cuisine_preference','mediterranean')">🫒 Mediterranean</button>
+                        <button class="pref-btn" onclick="setPref('cuisine_preference','all')">🌎 All Cuisines</button>
+                    </div>
+                </div>
+                <div class="pref-step" data-step="4">
+                    <h2>💪 Health Preference</h2>
+                    <p>What's your food style?</p>
+                    <div class="pref-options">
+                        <button class="pref-btn" onclick="setPref('health_preference','healthy')">🥗 Healthy & Clean</button>
+                        <button class="pref-btn" onclick="setPref('health_preference','balanced')">⚖️ Balanced</button>
+                        <button class="pref-btn" onclick="setPref('health_preference','fast_food')">🍔 Comfort Food</button>
+                    </div>
+                </div>
+                <div class="pref-step" data-step="5">
+                    <h2>⚠️ Allergies</h2>
+                    <p>Any ingredients you'd like to avoid?</p>
+                    <div class="pref-options allergy-grid">
+                        <button class="pref-btn toggle" data-allergy="dairy" onclick="toggleAllergy(this,'dairy')">🥛 Dairy</button>
+                        <button class="pref-btn toggle" data-allergy="nuts" onclick="toggleAllergy(this,'nuts')">🥜 Nuts</button>
+                        <button class="pref-btn toggle" data-allergy="gluten" onclick="toggleAllergy(this,'gluten')">🌾 Gluten</button>
+                        <button class="pref-btn toggle" data-allergy="soy" onclick="toggleAllergy(this,'soy')">🫘 Soy</button>
+                        <button class="pref-btn toggle" data-allergy="eggs" onclick="toggleAllergy(this,'eggs')">🥚 Eggs</button>
+                        <button class="pref-btn toggle" data-allergy="none" onclick="toggleAllergy(this,'none')">✅ None</button>
+                    </div>
+                    <button class="btn btn-primary" style="margin-top:1.5rem" onclick="savePreferences()">Save & Continue →</button>
+                </div>
+            </div>
+            <div class="pref-progress">
+                <div class="pref-progress-bar" id="pref-progress-bar"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CUISINE SELECTION ===== -->
+    <section id="cuisine-page" class="page">
+        <div class="cuisine-sel-container">
+            <h1 class="section-title">🌍 Choose Your Cuisine</h1>
+            <p class="section-subtitle">Our AI will craft personalized recipes based on your selection!</p>
+            <div class="cuisine-tiles" id="cuisine-tiles">
+                <button class="cuisine-tile" id="ctile-indian" onclick="selectCuisine('Indian')">
+                    <div class="ctile-flag">🇮🇳</div>
+                    <div class="ctile-name">Indian</div>
+                    <div class="ctile-desc">Spices &amp; Curries</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-chinese" onclick="selectCuisine('Chinese')">
+                    <div class="ctile-flag">🇨🇳</div>
+                    <div class="ctile-name">Chinese</div>
+                    <div class="ctile-desc">Wok &amp; Noodles</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-italian" onclick="selectCuisine('Italian')">
+                    <div class="ctile-flag">🇮🇹</div>
+                    <div class="ctile-name">Italian</div>
+                    <div class="ctile-desc">Pasta &amp; Pizza</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-mexican" onclick="selectCuisine('Mexican')">
+                    <div class="ctile-flag">🇲🇽</div>
+                    <div class="ctile-name">Mexican</div>
+                    <div class="ctile-desc">Tacos &amp; Salsas</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-korean" onclick="selectCuisine('Korean')">
+                    <div class="ctile-flag">🇰🇷</div>
+                    <div class="ctile-name">Korean</div>
+                    <div class="ctile-desc">Kimchi &amp; BBQ</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-japanese" onclick="selectCuisine('Japanese')">
+                    <div class="ctile-flag">🇯🇵</div>
+                    <div class="ctile-name">Japanese</div>
+                    <div class="ctile-desc">Sushi &amp; Ramen</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-american" onclick="selectCuisine('American')">
+                    <div class="ctile-flag">🇺🇸</div>
+                    <div class="ctile-name">American</div>
+                    <div class="ctile-desc">BBQ &amp; Burgers</div>
+                </button>
+                <button class="cuisine-tile" id="ctile-continental" onclick="selectCuisine('Continental')">
+                    <div class="ctile-flag">🌍</div>
+                    <div class="ctile-name">Continental</div>
+                    <div class="ctile-desc">European Classics</div>
+                </button>
+            </div>
+            <button class="btn btn-primary" style="margin-top:2rem" onclick="selectCuisine('All')">🌎 Show All Cuisines</button>
+        </div>
+    </section>
+
+    <!-- ===== RECIPES PAGE ===== -->
+    <section id="recipes-page" class="page">
+        <nav class="top-nav">
+            <span class="nav-logo" onclick="navigateTo('recipes-page')">🍳 AI Cooking Agent</span>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="✨ AI Search (e.g., 'spicy indian chicken' or 'sweet french dessert')..." oninput="searchRecipes(this.value)">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div id="google_translate_element" style="margin-left: 10px;"></div>
+            <div class="nav-actions">
+                <button class="icon-btn" onclick="openMealPlanner()" title="AI Meal Planner">📅</button>
+                <button class="icon-btn" onclick="showFavorites()" title="My Favorites">❤️</button>
+                <button class="icon-btn" onclick="toggleGroceryList()" title="Smart Grocery List">🛒</button>
+                <button class="icon-btn" onclick="toggleChatbot()" title="AI Assistant">🤖</button>
+                <button class="icon-btn" onclick="logout()" title="Logout">🚪</button>
+            </div>
+        </nav>
+        <div class="recipes-container">
+            <h1 class="section-title">Recommended For You</h1>
+            <p class="section-subtitle" id="recipes-subtitle">Based on your preferences</p>
+            <div style="text-align:center; margin-bottom: 2rem;">
+                <button id="gen-ai-btn" class="btn btn-primary" onclick="generateAIRecipe()">✨ Generate AI Recipe</button>
+            </div>
+
+            <div class="recipe-grid" id="recipe-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== FAVORITES PAGE ===== -->
+    <section id="favorites-page" class="page">
+        <nav class="top-nav">
+            <button class="nav-back" onclick="navigateTo('recipes-page')">← Back</button>
+            <span class="nav-logo">🍳 My Cookbook</span>
+            <div class="nav-actions">
+                <button class="icon-btn" onclick="toggleChatbot()">🤖</button>
+            </div>
+        </nav>
+        <div class="recipes-container">
+            <h1 class="section-title">❤️ My Favorites</h1>
+            <p class="section-subtitle">Your personally curated collection of deliciousness</p>
+            <div class="recipe-grid" id="favorites-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== RECIPE DETAIL PAGE ===== -->
+    <section id="recipe-detail-page" class="page">
+        <nav class="top-nav">
+            <button class="nav-back" onclick="window.location.hash=''; navigateTo('recipes-page')">← Back</button>
+            <span class="nav-logo">🍳 AI Cooking Agent</span>
+            <div class="nav-actions">
+                <button class="icon-btn" onclick="toggleChatbot()">🤖</button>
+            </div>
+        </nav>
+        <div class="detail-container" id="recipe-detail-content"></div>
+    </section>
+
+    <!-- ===== INGREDIENT CHECK PAGE ===== -->
+    <section id="ingredient-page" class="page">
+        <nav class="top-nav">
+            <button class="nav-back" onclick="navigateTo('recipe-detail-page')">← Back</button>
+            <span class="nav-logo">🍳 Ingredient Check</span>
+            <div class="nav-actions">
+                <button class="icon-btn" onclick="toggleChatbot()">🤖</button>
+            </div>
+        </nav>
+        <div class="ingredient-container glass-card" id="ingredient-content"></div>
+    </section>
+
+    <!-- ===== COOKING STEPS PAGE ===== -->
+    <section id="cooking-page" class="page">
+        <nav class="top-nav">
+            <button class="nav-back" onclick="navigateTo('recipe-detail-page')">← Back</button>
+            <span class="nav-logo">🍳 Step-by-Step Guide</span>
+            <div class="nav-actions">
+                <button class="icon-btn" onclick="toggleChatbot()">🤖</button>
+            </div>
+        </nav>
+        <div class="cooking-container" id="cooking-content"></div>
+    </section>
+
+    <!-- ===== AI MEAL PLANNER PAGE ===== -->
+    <section id="meal-plan-page" class="page">
+        <nav class="top-nav">
+            <button class="nav-back" onclick="navigateTo('recipes-page')">← Back</button>
+            <span class="nav-logo">📅 AI Meal Planner</span>
+            <div class="nav-actions">
+                <button class="icon-btn" onclick="toggleChatbot()">🤖</button>
+            </div>
+        </nav>
+        <div class="recipes-container">
+            <h1 class="section-title">Your 3-Day Meal Plan</h1>
+            <p class="section-subtitle">Curated by your AI Cooking Assistant based on your preferences</p>
+            <div id="meal-plan-content" style="margin-top: 2rem;">
+                <div style="text-align:center;padding:2rem;color:var(--text-light)">✨ Generating your personalized meal plan...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AI CHATBOT ===== -->
+    <div id="chatbot-panel" class="chatbot-panel">
+        <div class="chatbot-header">
+            <span>🤖 AI Cooking Assistant</span>
+            <button onclick="toggleChatbot()" class="chatbot-close">✕</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chat-msg bot">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-bubble">Hello! I'm your AI Cooking Assistant 🍳 Ask me about recipes, ingredients, substitutions, nutrition, or cooking tips!</div>
+            </div>
+        </div>
+        <form class="chatbot-input" onsubmit="sendChat(event)">
+            <button type="button" class="chat-mic-btn" id="chat-mic-btn" onclick="toggleVoiceRecording()" title="Use Voice Recognition">🎤</button>
+            <input type="text" id="chat-input" placeholder="Ask me anything about cooking..." autocomplete="off">
+            <button type="submit" class="chat-send-btn">➤</button>
+        </form>
+    </div>
+
+    <!-- ===== GROCERY LIST PANEL ===== -->
+    <div id="grocery-panel" class="chatbot-panel" style="right: -420px;">
+        <div class="chatbot-header">
+            <span>🛒 Smart Grocery List</span>
+            <button onclick="toggleGroceryList()" class="chatbot-close">✕</button>
+        </div>
+        <div class="chatbot-messages" id="grocery-items" style="background:var(--cream); padding:1.5rem;">
+            <!-- Items injected via JS -->
+        </div>
+        <div class="chatbot-input">
+            <button class="btn btn-primary btn-full" onclick="clearGroceryList()">Clear List</button>
+        </div>
+    </div>
+
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="app.js?v=20260607c"></script>
+</body>
+</html>
