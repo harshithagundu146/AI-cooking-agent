@@ -909,17 +909,30 @@ def _build_template_recipe(query, servings):
         base_servings = 4
         steps = specific["steps"]
 
+        main_image = _fetch_pexels_image(specific["name"])
+        if main_image == "✨":
+            main_image = emoji
+            
+        formatted_ingredients = []
+        for ing in specific["ingredients"]:
+            # generic template ingredients are simple strings
+            img_kw = ing.split()[-1].lower() # extremely naive for templates
+            formatted_ingredients.append({
+                "item": ing,
+                "image": f"https://spoonacular.com/cdn/ingredients_100x100/{img_kw}.jpg"
+            })
+
         return {
             "id": recipe_id,
             "name": specific["name"],
             "category": specific["category"],
             "cuisine": cuisine,
-            "image": emoji,
+            "image": main_image,
             "duration": specific["duration"],
             "difficulty": specific["difficulty"],
             "servings": servings,
             "tags": ["AI-generated", cuisine.lower()],
-            "ingredients": specific["ingredients"],
+            "ingredients": formatted_ingredients,
             "nutrition": specific["nutrition"],
             "steps": steps,
             "is_favorite": False,
@@ -1027,6 +1040,25 @@ from groq import Groq
 import os
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
+
+def _fetch_pexels_image(query):
+    """Fetch a high quality image for the recipe from Pexels API."""
+    if not PEXELS_API_KEY:
+        return "✨"
+    try:
+        import requests
+        import urllib.parse
+        url = f"https://api.pexels.com/v1/search?query={urllib.parse.quote(query + ' food')}&per_page=1"
+        headers = {"Authorization": PEXELS_API_KEY}
+        res = requests.get(url, headers=headers, timeout=5)
+        if res.ok:
+            data = res.json()
+            if data.get("photos"):
+                return data["photos"][0]["src"]["large"]
+    except Exception as e:
+        print(f"Pexels error: {e}")
+    return "✨"
 
 def _generate_with_ai(query, servings):
     """Use Groq AI to generate a complete, unique recipe."""
@@ -1041,9 +1073,14 @@ Respond with ONLY a valid JSON object, no markdown, no code fences. Use this exa
   "duration": "e.g. 45 mins",
   "difficulty": "Easy/Medium/Hard",
   "ingredients": [
-    "500g boneless chicken thighs, cubed",
-    "2 tbsp butter",
-    "1 cup heavy cream"
+    {{
+      "item": "500g boneless chicken thighs, cubed",
+      "image_keyword": "chicken-thighs"
+    }},
+    {{
+      "item": "2 tbsp butter",
+      "image_keyword": "butter"
+    }}
   ],
   "nutrition": {{
     "calories": 450,
@@ -1067,6 +1104,7 @@ Respond with ONLY a valid JSON object, no markdown, no code fences. Use this exa
 
 CRITICAL RULES:
 - For "{query}" use ONLY the correct, authentic ingredients for THAT specific dish
+- 'image_keyword' must be a simple, singular noun phrase with dashes instead of spaces (e.g. 'heavy-cream', 'olive-oil', 'red-onion').
 - Include ALL ingredients with precise measurements
 - Provide 5-8 detailed steps
 - Nutrition must be realistic per serving
@@ -1135,17 +1173,37 @@ def ai_generate_recipe():
             if 'tip' not in s:
                 s['tip'] = ''
 
+        recipe_name = ai_data.get('name', query.title())
+        main_image = _fetch_pexels_image(recipe_name)
+        if main_image == "✨":
+            main_image = emoji
+            
+        raw_ingredients = ai_data.get('ingredients', [])
+        formatted_ingredients = []
+        for ing in raw_ingredients:
+            if isinstance(ing, dict):
+                img_kw = ing.get('image_keyword', 'ingredient')
+                formatted_ingredients.append({
+                    "item": ing.get('item', ''),
+                    "image": f"https://spoonacular.com/cdn/ingredients_100x100/{img_kw}.jpg"
+                })
+            else:
+                formatted_ingredients.append({
+                    "item": str(ing),
+                    "image": "https://spoonacular.com/cdn/ingredients_100x100/ingredient.jpg"
+                })
+
         generated_recipe = {
             "id": recipe_id,
-            "name": ai_data.get('name', query.title()),
+            "name": recipe_name,
             "category": ai_data.get('category', 'non-vegetarian'),
             "cuisine": cuisine,
-            "image": emoji,
+            "image": main_image,
             "duration": ai_data.get('duration', '40 mins'),
             "difficulty": ai_data.get('difficulty', 'Medium'),
             "servings": servings,
             "tags": ["AI-generated", cuisine.lower()],
-            "ingredients": ai_data.get('ingredients', []),
+            "ingredients": formatted_ingredients,
             "nutrition": ai_data.get('nutrition', {
                 "calories": 400, "protein": 20, "carbohydrates": 45,
                 "fats": 15, "fiber": 5, "vitamins": "A, B, C",
@@ -1172,7 +1230,11 @@ def ai_generate_recipe():
                     measure = meal.get(f'strMeasure{i}')
                     if ing and ing.strip():
                         part = f"{measure.strip()} {ing.strip()}" if measure and measure.strip() else ing.strip()
-                        ingredients.append(part)
+                        img_kw = ing.strip().lower().replace(" ", "-")
+                        ingredients.append({
+                            "item": part,
+                            "image": f"https://spoonacular.com/cdn/ingredients_100x100/{img_kw}.jpg"
+                        })
 
                 raw_instructions = meal.get('strInstructions', '').replace('\r\n', '\n').split('\n')
                 steps = []
@@ -1192,13 +1254,14 @@ def ai_generate_recipe():
                 is_veg = meal_category in ['vegetarian', 'vegan', 'dessert', 'side']
                 cuisine_area = meal.get('strArea', 'Fusion')
                 emoji = _CUISINE_EMOJIS.get(cuisine_area.lower(), "🍽️")
+                main_image = meal.get('strMealThumb', emoji)
 
                 generated_recipe = {
                     "id": recipe_id,
                     "name": meal['strMeal'],
                     "category": "vegetarian" if is_veg else "non-vegetarian",
                     "cuisine": cuisine_area,
-                    "image": emoji,
+                    "image": main_image,
                     "duration": "45 mins",
                     "difficulty": "Medium",
                     "servings": servings,

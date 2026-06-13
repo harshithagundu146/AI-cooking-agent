@@ -313,7 +313,7 @@ async function openRecipe(id) {
     </div>
     <div class="detail-section">
       <h2>🧾 Ingredients</h2>
-      <ul class="ingredient-list" id="ingredient-list">${(recipe.ingredients||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
+      <ul class="ingredient-list" id="ingredient-list">${(recipe.ingredients||[]).map(i=>`<li>${scaleIngredientQuantity(i, 1)}</li>`).join('')}</ul>
     </div>
     <div class="detail-section">
       <h2>📊 Nutrition Per Serving</h2>
@@ -335,10 +335,13 @@ async function openRecipe(id) {
   navigateTo('recipe-detail-page');
 }
 
-function scaleIngredientQuantity(str, scale) {
-  if (scale === 1) return str;
-  // Match a leading number/fraction, e.g. "2", "1/2", "1.5"
-  return str.replace(/^([\d\/\.]+)\s*/, (match, numStr) => {
+function scaleIngredientQuantity(ing, scale) {
+  let str = typeof ing === 'string' ? ing : (ing.item || '');
+  let imgHtml = typeof ing === 'string' || !ing.image ? '' : `<img src="${ing.image}" class="ingredient-img" onerror="this.style.display='none'">`;
+  
+  if (scale === 1) return `${imgHtml} <span>${str}</span>`;
+  
+  let newStr = str.replace(/^([\d\/\.]+)\s*/, (match, numStr) => {
     let num;
     if (numStr.includes('/')) {
       const parts = numStr.split('/');
@@ -348,7 +351,6 @@ function scaleIngredientQuantity(str, scale) {
     }
     if (isNaN(num)) return match;
     let scaled = num * scale;
-    // Format nicely
     if (scaled % 1 !== 0) {
       if (Math.abs(scaled - 0.25) < 0.01) scaled = '1/4';
       else if (Math.abs(scaled - 0.33) < 0.01) scaled = '1/3';
@@ -359,6 +361,8 @@ function scaleIngredientQuantity(str, scale) {
     }
     return scaled + ' ';
   });
+  
+  return `${imgHtml} <span>${newStr}</span>`;
 }
 
 function updateServings(newServings) {
