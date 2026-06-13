@@ -909,9 +909,7 @@ def _build_template_recipe(query, servings):
         base_servings = 4
         steps = specific["steps"]
 
-        main_image = _fetch_pexels_image(specific["name"])
-        if main_image == "✨":
-            main_image = emoji
+        main_image = emoji
             
         formatted_ingredients = []
         for ing in specific["ingredients"]:
@@ -1040,25 +1038,6 @@ from groq import Groq
 import os
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
-PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
-
-def _fetch_pexels_image(query):
-    """Fetch a high quality image for the recipe from Pexels API."""
-    if not PEXELS_API_KEY:
-        return "✨"
-    try:
-        import requests
-        import urllib.parse
-        url = f"https://api.pexels.com/v1/search?query={urllib.parse.quote(query + ' food')}&per_page=1"
-        headers = {"Authorization": PEXELS_API_KEY}
-        res = requests.get(url, headers=headers, timeout=5)
-        if res.ok:
-            data = res.json()
-            if data.get("photos"):
-                return data["photos"][0]["src"]["large"]
-    except Exception as e:
-        print(f"Pexels error: {e}")
-    return "✨"
 
 def _generate_with_ai(query, servings):
     """Use Groq AI to generate a complete, unique recipe."""
@@ -1174,9 +1153,7 @@ def ai_generate_recipe():
                 s['tip'] = ''
 
         recipe_name = ai_data.get('name', query.title())
-        main_image = _fetch_pexels_image(recipe_name)
-        if main_image == "✨":
-            main_image = emoji
+        main_image = emoji
             
         raw_ingredients = ai_data.get('ingredients', [])
         formatted_ingredients = []
