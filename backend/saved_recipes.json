@@ -1,233 +1,199 @@
 [
   {
-    "id": "ai_8eff2bea62",
-    "name": "Give Jelebi",
-    "category": "non-vegetarian",
-    "cuisine": "Fusion",
-    "image": "✨",
-    "duration": "40 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "fusion"
-    ],
-    "ingredients": [
-      "2 tbsp vegetable oil",
-      "1 medium onion, diced",
-      "3 cloves garlic, minced",
-      "1 tsp salt",
-      "1/2 tsp black pepper",
-      "1 tsp paprika",
-      "500g protein of choice",
-      "2 cups mixed vegetables",
-      "1 cup broth or water",
-      "Fresh herbs for garnish"
-    ],
-    "nutrition": {
-      "calories": 380,
-      "protein": 28,
-      "carbohydrates": 40,
-      "fats": 14,
-      "fiber": 3,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium, Potassium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Prep Ingredients",
-        "instruction": "Gather all ingredients for Give Jelebi. Wash, peel, and chop vegetables. Measure out spices and sauces. Pat protein dry if using meat or press tofu if using tofu.",
-        "why": "Proper mise en place ensures smooth cooking without scrambling for ingredients mid-recipe.",
-        "tip": "Read through all the steps once before starting to cook."
-      },
-      {
-        "step": 2,
-        "title": "Build the Flavor Base",
-        "instruction": "Heat oil in a large pan or wok over medium heat. Add aromatics (onion, garlic, ginger if using) and sauté for 2-3 minutes until fragrant and translucent.",
-        "why": "Aromatics form the backbone of Fusion cuisine — they release essential oils when gently heated.",
-        "tip": "Keep the heat at medium. Burnt garlic turns bitter and ruins the dish."
-      },
-      {
-        "step": 3,
-        "title": "Add Spices & Seasonings",
-        "instruction": "Add the dry spices and seasonings. Stir constantly for 30-60 seconds to bloom the spices and release their full aroma.",
-        "why": "Blooming spices in oil activates fat-soluble flavor compounds that water alone cannot extract.",
-        "tip": "If spices start to smoke, reduce heat immediately and add a splash of water."
-      },
-      {
-        "step": 4,
-        "title": "Cook the Main Protein",
-        "instruction": "Add your protein to the pan. Cook for 5-7 minutes, turning occasionally, until golden on the outside. Season lightly as you go.",
-        "why": "Browning creates a Maillard reaction — complex flavors that elevate the entire dish.",
-        "tip": "Don't move the protein too much — let it develop a golden crust before flipping."
-      },
-      {
-        "step": 5,
-        "title": "Combine & Simmer",
-        "instruction": "Add remaining ingredients (sauces, liquids, vegetables). Stir to combine, bring to a gentle simmer, and cook for 10-15 minutes with the lid partially on.",
-        "why": "Simmering allows all the flavors to meld together into a harmonious, well-rounded dish.",
-        "tip": "Taste and adjust seasoning — a squeeze of lemon or pinch of sugar can balance flavors."
-      },
-      {
-        "step": 6,
-        "title": "Plate & Serve",
-        "instruction": "Remove from heat. Plate your Give Jelebi beautifully and garnish with fresh herbs. Serve immediately while hot.",
-        "why": "Presentation matters — we eat with our eyes first, and fresh garnishes add brightness.",
-        "tip": "A final drizzle of quality oil or a squeeze of citrus can elevate the dish dramatically."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_d7eba31142",
-    "name": "Laksa King Prawn Noodles",
-    "category": "non-vegetarian",
-    "cuisine": "Malaysian",
-    "image": "🍽️",
-    "duration": "45 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "malaysian"
-    ],
-    "ingredients": [
-      "1 tbsp Olive Oil",
-      "1 finely sliced Red Chilli",
-      "2 ½ tbsp Thai red curry paste",
-      "1 vegetable stock cube",
-      "400ml can coconut milk",
-      "2 tsp fish sauce",
-      "100g rice noodles",
-      "2 juice of 1, the other halved lime",
-      "150g king prawns",
-      "½ small pack coriander"
-    ],
-    "nutrition": {
-      "calories": 400,
-      "protein": 20,
-      "carbohydrates": 45,
-      "fats": 15,
-      "fiber": 5,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Step 1",
-        "instruction": "Heat the oil in a medium saucepan and add the chilli. Cook for 1 min, then add the curry paste, stir and cook for 1 min more. Dissolve the stock cube in a large jug in 700ml boiling water, then pour into the pan and stir to combine. Tip in the coconut milk and bring to the boil.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 2,
-        "title": "Step 2",
-        "instruction": "Add the fish sauce and a little seasoning. Toss in the noodles and cook for a further 3-4 mins until softening. Squeeze in the lime juice, add the prawns and cook through until warm, about 2-3 mins. Scatter over some of the coriander.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 3,
-        "title": "Step 3",
-        "instruction": "Serve in bowls with the remaining coriander and lime wedges on top for squeezing over.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
     "id": "ai_74bddbdb80",
-    "name": "Jelebi",
-    "category": "non-vegetarian",
-    "cuisine": "Fusion",
-    "image": "✨",
-    "duration": "40 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "fusion"
-    ],
-    "ingredients": [
-      "2 tbsp vegetable oil",
-      "1 medium onion, diced",
-      "3 cloves garlic, minced",
-      "1 tsp salt",
-      "1/2 tsp black pepper",
-      "1 tsp paprika",
-      "500g protein of choice",
-      "2 cups mixed vegetables",
-      "1 cup broth or water",
-      "Fresh herbs for garnish"
-    ],
-    "nutrition": {
-      "calories": 380,
-      "protein": 28,
-      "carbohydrates": 40,
-      "fats": 14,
-      "fiber": 3,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium, Potassium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Prep Ingredients",
-        "instruction": "Gather all ingredients for Jelebi. Wash, peel, and chop vegetables. Measure out spices and sauces. Pat protein dry if using meat or press tofu if using tofu.",
-        "why": "Proper mise en place ensures smooth cooking without scrambling for ingredients mid-recipe.",
-        "tip": "Read through all the steps once before starting to cook."
-      },
-      {
-        "step": 2,
-        "title": "Build the Flavor Base",
-        "instruction": "Heat oil in a large pan or wok over medium heat. Add aromatics (onion, garlic, ginger if using) and sauté for 2-3 minutes until fragrant and translucent.",
-        "why": "Aromatics form the backbone of Fusion cuisine — they release essential oils when gently heated.",
-        "tip": "Keep the heat at medium. Burnt garlic turns bitter and ruins the dish."
-      },
-      {
-        "step": 3,
-        "title": "Add Spices & Seasonings",
-        "instruction": "Add the dry spices and seasonings. Stir constantly for 30-60 seconds to bloom the spices and release their full aroma.",
-        "why": "Blooming spices in oil activates fat-soluble flavor compounds that water alone cannot extract.",
-        "tip": "If spices start to smoke, reduce heat immediately and add a splash of water."
-      },
-      {
-        "step": 4,
-        "title": "Cook the Main Protein",
-        "instruction": "Add your protein to the pan. Cook for 5-7 minutes, turning occasionally, until golden on the outside. Season lightly as you go.",
-        "why": "Browning creates a Maillard reaction — complex flavors that elevate the entire dish.",
-        "tip": "Don't move the protein too much — let it develop a golden crust before flipping."
-      },
-      {
-        "step": 5,
-        "title": "Combine & Simmer",
-        "instruction": "Add remaining ingredients (sauces, liquids, vegetables). Stir to combine, bring to a gentle simmer, and cook for 10-15 minutes with the lid partially on.",
-        "why": "Simmering allows all the flavors to meld together into a harmonious, well-rounded dish.",
-        "tip": "Taste and adjust seasoning — a squeeze of lemon or pinch of sugar can balance flavors."
-      },
-      {
-        "step": 6,
-        "title": "Plate & Serve",
-        "instruction": "Remove from heat. Plate your Jelebi beautifully and garnish with fresh herbs. Serve immediately while hot.",
-        "why": "Presentation matters — we eat with our eyes first, and fresh garnishes add brightness.",
-        "tip": "A final drizzle of quality oil or a squeeze of citrus can elevate the dish dramatically."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_64b0235d9a",
-    "name": "Chickentikka Masala",
-    "category": "non-vegetarian",
+    "name": "Jelebi (Indian Fried Dough)",
+    "category": "Non-Vegetarian",
     "cuisine": "Indian",
     "image": "🍛",
-    "duration": "40 mins",
+    "duration": "1 hour 15 minutes",
+    "difficulty": "Hard",
+    "servings": 2,
+    "tags": [
+      "AI-generated",
+      "indian"
+    ],
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1/4 teaspoon salt",
+      "1/4 teaspoon baking soda",
+      "1/4 teaspoon baking powder",
+      "1 cup lukewarm milk",
+      "2 large eggs, beaten",
+      "1/4 cup ghee or vegetable oil",
+      "Vegetable oil for frying",
+      "Rose water or cardamom powder for flavor (optional)",
+      "Powdered sugar for serving (optional)"
+    ],
+    "nutrition": {
+      "calories": 540,
+      "protein": 18,
+      "carbohydrates": 80,
+      "fats": 22,
+      "fiber": 2,
+      "vitamins": "",
+      "minerals": ""
+    },
+    "steps": [
+      {
+        "step": 1,
+        "title": "Mix Dry Ingredients",
+        "instruction": "In a large mixing bowl, whisk together flour, salt, baking soda, and baking powder.",
+        "why": "To ensure yeast-free leavening and structure in the dough.",
+        "tip": "Use room temperature ingredients for better mixing."
+      },
+      {
+        "step": 2,
+        "title": "Create Wet Ingredients",
+        "instruction": "In a separate bowl, whisk together milk, eggs, and ghee or vegetable oil.",
+        "why": "To create a smooth and creamy starter for the dough.",
+        "tip": "Use full-fat milk for a more authentic taste."
+      },
+      {
+        "step": 3,
+        "title": "Combine Wet and Dry Ingredients",
+        "instruction": "Slowly pour the wet ingredients into the dry ingredients and mix until a smooth batter forms.",
+        "why": "To distribute the liquid evenly and create a delicate dough.",
+        "tip": "Don't overmix the batter, as it will lead to dense lembas."
+      },
+      {
+        "step": 4,
+        "title": "Rest the Dough",
+        "instruction": "Let the batter rest for 1 hour in a warm, draft-free place, allowing it to ferment.",
+        "why": "To allow the yeast-free leavening agents to activate and the dough to rise.",
+        "tip": "Don't disturb the dough during this period."
+      },
+      {
+        "step": 5,
+        "title": "Heat the Oil",
+        "instruction": "Heat sufficient vegetable oil in a deep frying pan over medium heat.",
+        "why": "To create a hot, even layer of oil for frying the lembas.",
+        "tip": "Monitor the oil temperature to prevent it from getting too hot."
+      },
+      {
+        "step": 6,
+        "title": "Fry the Jelebis",
+        "instruction": "Using a piping bag or a spoon, drop small portions of the rested dough into the hot oil, about 1-inch apart.",
+        "why": "To cook the lembas evenly and prevent them from sticking together.",
+        "tip": "Don't overcrowd the pan, as it may lead to steaming instead of frying."
+      },
+      {
+        "step": 7,
+        "title": "Drain and Serve",
+        "instruction": "Remove the fried jelebis from the oil with a slotted spoon and place them on paper towels to drain excess oil.",
+        "why": "To remove excess oil and prevent oil absorption.",
+        "tip": "Serve the jelebis hot or at room temperature, as desired."
+      },
+      {
+        "step": 8,
+        "title": "Optional: Add Flavor and Sugar",
+        "instruction": "Dust the jelebis with powdered sugar or rose water and cardamom powder, if desired.",
+        "why": "To enhance the flavor and texture of the lembas.",
+        "tip": "Use a light hand when dusting the jelebis, as the flavor should be subtle."
+      }
+    ],
+    "is_favorite": false,
+    "ai_generated": true
+  },
+  {
+    "id": "ai_a36c711d95",
+    "name": "Eggpuff",
+    "category": "non-vegetarian",
+    "cuisine": "Fusion",
+    "image": "✨",
+    "duration": "1 hr 15 mins",
+    "difficulty": "Hard",
+    "servings": 4,
+    "tags": [
+      "AI-generated",
+      "fusion"
+    ],
+    "ingredients": [
+      "250g puff pastry, thawed",
+      "4 large eggs",
+      "1/2 cup grated cheddar cheese",
+      "1/4 cup chopped scallions",
+      "1/4 cup grated butter",
+      "1 tsp salt",
+      "1/4 tsp black pepper",
+      "1/4 tsp paprika"
+    ],
+    "nutrition": {
+      "calories": 375,
+      "protein": 12,
+      "carbohydrates": 25,
+      "fats": 22,
+      "fiber": 2,
+      "vitamins": "B12, A",
+      "minerals": "Phosphorus, Iron"
+    },
+    "steps": [
+      {
+        "step": 1,
+        "title": "Preheat Oven and Unfold Puff Pastry",
+        "instruction": "Preheat the oven to 400°F (200°C). Roll out the puff pastry to a thickness of about 1/8 inch (3 mm).",
+        "why": "This step ensures the pastry cooks evenly.",
+        "tip": "Use cold puff pastry for best results."
+      },
+      {
+        "step": 2,
+        "title": "Prepare Egg Mixture",
+        "instruction": "In a bowl, whisk together the eggs, grated cheddar cheese, chopped scallions, salt, black pepper, and paprika.",
+        "why": "This step combines the flavors and textures of the filling.",
+        "tip": "Use room-temperature eggs for easier whisking."
+      },
+      {
+        "step": 3,
+        "title": "Brush the Pastry with Egg Mixture",
+        "instruction": "Brush the entire surface of the pastry with the egg mixture, leaving a small border around the edges.",
+        "why": "This step adds flavor and helps hold the pastry together.",
+        "tip": "Don't overfill the pastry, or it will be difficult to seal."
+      },
+      {
+        "step": 4,
+        "title": "Fold the Pastry and Seal the Edges",
+        "instruction": "Fold the pastry in half, lengthwise, and press the edges together to seal. Use a fork to crimp the edges.",
+        "why": "This step creates the puffed shape and keeps the filling inside.",
+        "tip": "Make sure the edges are tightly sealed to prevent filling leakage."
+      },
+      {
+        "step": 5,
+        "title": "Bake the Eggpuff",
+        "instruction": "Place the eggpuff on a baking sheet lined with parchment paper and bake for 15 minutes.",
+        "why": "This step cooks the pastry and puffs it to the correct size.",
+        "tip": "Don't overbake, or the pastry will become too dark."
+      },
+      {
+        "step": 6,
+        "title": "Increase Oven Temperature and Finish Baking",
+        "instruction": "Increase the oven temperature to 425°F (220°C) and bake for an additional 10-12 minutes, or until the eggpuff is golden brown.",
+        "why": "This step finishes cooking the eggpuff and adds color to the pastry.",
+        "tip": "Keep an eye on the eggpuff during this time, as oven temperatures can vary."
+      },
+      {
+        "step": 7,
+        "title": "Check for Doneness",
+        "instruction": "Check the eggpuff for doneness by gently pressing on the pastry. It should be firm and golden brown.",
+        "why": "This step ensures the eggpuff is cooked through and safe to eat.",
+        "tip": "If the eggpuff is not done, return it to the oven for a few more minutes."
+      },
+      {
+        "step": 8,
+        "title": "Serve the Eggpuff",
+        "instruction": "Remove the eggpuff from the oven and let it cool on a wire rack for 5 minutes. Serve warm or at room temperature, sliced into thick wedges.",
+        "why": "This step allows the eggpuff to cool and sets the filling.",
+        "tip": "Serve the eggpuff with a side of fruit or whipped cream for a sweet treat."
+      }
+    ],
+    "is_favorite": false,
+    "ai_generated": true
+  },
+  {
+    "id": "ai_c6f8f6a754",
+    "name": "Gulab Jamun",
+    "category": "vegetarian",
+    "cuisine": "Indian",
+    "image": "🍛",
+    "duration": "2 hours",
     "difficulty": "Medium",
     "servings": 4,
     "tags": [
@@ -235,718 +201,387 @@
       "indian"
     ],
     "ingredients": [
-      "2 tbsp vegetable oil",
-      "1 large onion, diced",
-      "3 cloves garlic, minced",
-      "1 inch ginger, grated",
+      "500g paneer or milk powder",
+      "1/2 cup all-purpose flour",
+      "1 tsp baking soda",
+      "1 tsp cardamom powder",
+      "1/4 tsp salt",
+      "1/4 cup ghee or oil",
+      "1 cup lukewarm milk",
+      "1 cup khoya or dried milk",
+      "Vegetable oil for frying",
+      "1 cup gulab syrup (see below for recipe)",
+      "1 cup rose water (for garnish)"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 16,
+      "carbohydrates": 36,
+      "fats": 18,
+      "fiber": 0,
+      "vitamins": "B12",
+      "minerals": "Calcium, Phosphorus"
+    },
+    "steps": [
+      {
+        "step": 1,
+        "title": "Make the dough",
+        "instruction": "In a large mixing bowl, combine the paneer, flour, baking soda, cardamom powder and salt. Mix well until the dough comes together.",
+        "why": "This dough will help us create the jamun.",
+        "tip": "Make sure the paneer is crumbly and the dough is not too sticky."
+      },
+      {
+        "step": 2,
+        "title": "Add ghee and milk",
+        "instruction": "Add the ghee or oil and lukewarm milk to the dough. Mix well until the dough is smooth and pliable.",
+        "why": "The ghee and milk will help the dough to come together and give it a rich flavor.",
+        "tip": "Do not over-mix the dough."
+      },
+      {
+        "step": 3,
+        "title": "Knead the dough",
+        "instruction": "Knead the dough for 10-15 minutes until it becomes smooth and elastic.",
+        "why": "This will help to develop the gluten in the dough and make it easier to shape.",
+        "tip": "Use a standing mixer or a food processor to knead the dough if possible."
+      },
+      {
+        "step": 4,
+        "title": "Rest the dough",
+        "instruction": "Cover the dough with a damp cloth and let it rest for 30 minutes.",
+        "why": "This will allow the yeast to activate and the dough to rise.",
+        "tip": "Make sure the dough is in a warm place while it rests."
+      },
+      {
+        "step": 5,
+        "title": "Make the khoya",
+        "instruction": "Combine the dried milk and a little water to make a smooth paste. Set aside.",
+        "why": "The khoya will add a rich and creamy texture to the jamun.",
+        "tip": "You can also use store-bought khoya if you prefer."
+      },
+      {
+        "step": 6,
+        "title": "Shape the dough",
+        "instruction": "Take small balls of the dough and flatten them slightly into a disk shape. Then wrap each disk around a small ball of khoya to make a jamun shape.",
+        "why": "This will give the jamun its characteristic shape and texture.",
+        "tip": "Make sure the dough is not too thick or too thin."
+      },
+      {
+        "step": 7,
+        "title": "Fry the jamun",
+        "instruction": "Heat enough oil in a deep frying pan to deep-fry the jamun. When the oil is hot, add the jamun and fry until they are golden brown.",
+        "why": "The frying will give the jamun a crispy exterior and a soft interior.",
+        "tip": "Do not overcrowd the pan and fry the jamun in batches if necessary."
+      },
+      {
+        "step": 8,
+        "title": "Soak in gulab syrup",
+        "instruction": "Once the jamun are fried, soak them in the warm gulab syrup for at least 30 minutes before serving.",
+        "why": "The gulab syrup will give the jamun its characteristic sweet and fragrant flavor.",
+        "tip": "Make sure the syrup is warm and the jamun are fully soaked before serving."
+      }
+    ],
+    "is_favorite": false,
+    "ai_generated": true
+  },
+  {
+    "id": "ai_cd564110ab",
+    "name": "Chicken Biryani",
+    "category": "non-vegetarian",
+    "cuisine": "Indian",
+    "image": "🍛",
+    "duration": "60-70 mins",
+    "difficulty": "Medium",
+    "servings": 4,
+    "tags": [
+      "AI-generated",
+      "indian"
+    ],
+    "ingredients": [
+      "500g boneless chicken thighs, cut into 1 inch pieces",
+      "1 cup basmati rice",
+      "2 tbsp ghee (clarified butter)",
+      "0.5 cup vegetable oil",
+      "2 medium onions, thinly sliced",
+      "4 cloves of garlic, minced",
+      "1 large ginger, minced",
+      "1 cup mixed basmati rice (separately rinsed and drained)",
+      "1 cup whole wheat bread slices (dried and crumbled)",
+      "2 tbsp saffron threads, soaked in 2 tbsp hot water",
       "1 tsp cumin seeds",
+      "2 cloves",
+      "1 tsp cinnamon powder",
+      "1 tsp cardamom powder",
+      "1 tsp nutmeg powder",
       "1 tsp turmeric powder",
-      "1 tsp garam masala",
-      "1 tsp salt",
-      "300g fish fillet, cubed",
-      "1 cup tomato puree",
-      "1/2 cup yogurt",
-      "Fresh cilantro for garnish"
+      "2 tsp red chili powder",
+      "2 tsp garam masala powder",
+      "Salt to taste",
+      "4 green chilies",
+      "Chopped coriander leaves for garnish"
     ],
     "nutrition": {
-      "calories": 380,
-      "protein": 28,
-      "carbohydrates": 40,
-      "fats": 14,
+      "calories": 520,
+      "protein": 40,
+      "carbohydrates": 60,
+      "fats": 20,
       "fiber": 3,
-      "vitamins": "A, B, C",
+      "vitamins": "B6, C, B12",
       "minerals": "Iron, Calcium, Potassium"
     },
     "steps": [
       {
         "step": 1,
-        "title": "Prep Ingredients",
-        "instruction": "Gather all ingredients for Chickentikka Masala. Wash, peel, and chop vegetables. Measure out spices and sauces. Pat protein dry if using meat or press tofu if using tofu.",
-        "why": "Proper mise en place ensures smooth cooking without scrambling for ingredients mid-recipe.",
-        "tip": "Read through all the steps once before starting to cook."
+        "title": "Heat Oil and Sauté Onions & Spices",
+        "instruction": "In a large heavy bottom pan, heat 4 tbsp of vegetable oil and ghee over medium heat. Add cumin seeds, cloves, cinnamon stick, green chilies, and sauté for 1 minute. Add thinly sliced onions and fry until they turn golden brown.",
+        "why": "This creates the base of our biryani and brings out the flavors of the spices.",
+        "tip": "Use a mixture of both ghee and oil for an authentic flavor."
       },
       {
         "step": 2,
-        "title": "Build the Flavor Base",
-        "instruction": "Heat oil in a large pan or wok over medium heat. Add aromatics (onion, garlic, ginger if using) and sauté for 2-3 minutes until fragrant and translucent.",
-        "why": "Aromatics form the backbone of Indian cuisine — they release essential oils when gently heated.",
-        "tip": "Keep the heat at medium. Burnt garlic turns bitter and ruins the dish."
+        "title": "Marinate Chicken",
+        "instruction": "In a separate bowl, combine marinated chicken, 1 tsp cumin powder, 1 tsp coriander powder, 1/2 tsp turmeric powder, 1/2 tsp red chili powder, and salt to taste. Mix well and keep aside for 30 minutes.",
+        "why": "This process tenderizes the chicken and brings out its flavor.",
+        "tip": "Use yogurt instead of ghee for marinating chicken for extra tenderness."
       },
       {
         "step": 3,
-        "title": "Add Spices & Seasonings",
-        "instruction": "Add the dry spices and seasonings. Stir constantly for 30-60 seconds to bloom the spices and release their full aroma.",
-        "why": "Blooming spices in oil activates fat-soluble flavor compounds that water alone cannot extract.",
-        "tip": "If spices start to smoke, reduce heat immediately and add a splash of water."
+        "title": "Fry Marinated Chicken",
+        "instruction": "After 30 minutes, heat 2 additional tbsp of oil in the same pan. Remove the chicken from marinade and add to the pan. Cook until the chicken turns golden brown and is cooked through.",
+        "why": "This adds texture and flavor to the biryani.",
+        "tip": "Don't overcook the chicken, it should be juicy."
       },
       {
         "step": 4,
-        "title": "Cook the Main Protein",
-        "instruction": "Add your protein to the pan. Cook for 5-7 minutes, turning occasionally, until golden on the outside. Season lightly as you go.",
-        "why": "Browning creates a Maillard reaction — complex flavors that elevate the entire dish.",
-        "tip": "Don't move the protein too much — let it develop a golden crust before flipping."
+        "title": "Prepare Basmati Rice",
+        "instruction": "Rinse the basmati rice in a fine mesh sieve until the water runs clear. Drain the water and add 2 cups of water. Add 1 tsp of salt to the water and allow it to soak for 20 minutes.",
+        "why": "Soaking basmati rice makes it easier to cook and gives it a better texture.",
+        "tip": "Don't over-soak, it should just absorb some water."
       },
       {
         "step": 5,
-        "title": "Combine & Simmer",
-        "instruction": "Add remaining ingredients (sauces, liquids, vegetables). Stir to combine, bring to a gentle simmer, and cook for 10-15 minutes with the lid partially on.",
-        "why": "Simmering allows all the flavors to meld together into a harmonious, well-rounded dish.",
-        "tip": "Taste and adjust seasoning — a squeeze of lemon or pinch of sugar can balance flavors."
+        "title": "Cook Basmati Rice",
+        "instruction": "After 20 minutes, drain the water from the rice and transfer it to a large pan. Add more water if needed, and bring it to a boil. Reduce the heat to medium-low, cover the pan, and simmer until it's cooked.",
+        "why": "This cooks the rice to perfection and keeps its grain texture.",
+        "tip": "Use a pressure cooker to speed up the cooking process."
       },
       {
         "step": 6,
-        "title": "Plate & Serve",
-        "instruction": "Remove from heat. Plate your Chickentikka Masala beautifully and garnish with fresh herbs. Serve immediately while hot.",
-        "why": "Presentation matters — we eat with our eyes first, and fresh garnishes add brightness.",
-        "tip": "A final drizzle of quality oil or a squeeze of citrus can elevate the dish dramatically."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_7cf2db5ec2",
-    "name": "Cassava pizza",
-    "category": "non-vegetarian",
-    "cuisine": "Venezuela",
-    "image": "🍽️",
-    "duration": "45 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "venezuela"
-    ],
-    "ingredients": [
-      "6 cut thick slices Casabe",
-      "450g Tomato Sauce",
-      "225g Chorizo",
-      "225g Turkey Ham",
-      "75g Sweetcorn",
-      "40g Green Olives",
-      "55g Paprika",
-      "50g Mozzarella"
-    ],
-    "nutrition": {
-      "calories": 400,
-      "protein": 20,
-      "carbohydrates": 45,
-      "fats": 15,
-      "fiber": 5,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Step 1",
-        "instruction": "Preheat the oven to 200ºC.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 2,
-        "title": "Step 2",
-        "instruction": "Cut the bacon or chorizo into medium pieces and the paprika into strips.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 3,
-        "title": "Step 3",
-        "instruction": "Spread a little tomato sauce and mozzarella cheese on each portion of cassava.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 4,
-        "title": "Step 4",
-        "instruction": "Add the bacon or chorizo, corn, turkey ham, some olives and paprika.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 5,
-        "title": "Step 5",
-        "instruction": "Bake for 7 to 10 minutes.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 6,
-        "title": "Step 6",
-        "instruction": "Remove from the oven and enjoy.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_a67f32086f",
-    "name": "Butter Chicken",
-    "category": "non-vegetarian",
-    "cuisine": "Fusion",
-    "image": "✨",
-    "duration": "40 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "fusion"
-    ],
-    "ingredients": [
-      "2 tbsp vegetable oil",
-      "1 medium onion, diced",
-      "3 cloves garlic, minced",
-      "1 tsp salt",
-      "1/2 tsp black pepper",
-      "1 tsp paprika",
-      "500g protein of choice",
-      "2 cups mixed vegetables",
-      "1 cup broth or water",
-      "Fresh herbs for garnish"
-    ],
-    "nutrition": {
-      "calories": 380,
-      "protein": 28,
-      "carbohydrates": 40,
-      "fats": 14,
-      "fiber": 3,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium, Potassium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Prep Ingredients",
-        "instruction": "Gather all ingredients for Butter Chicken. Wash, peel, and chop vegetables. Measure out spices and sauces. Pat protein dry if using meat or press tofu if using tofu.",
-        "why": "Proper mise en place ensures smooth cooking without scrambling for ingredients mid-recipe.",
-        "tip": "Read through all the steps once before starting to cook."
-      },
-      {
-        "step": 2,
-        "title": "Build the Flavor Base",
-        "instruction": "Heat oil in a large pan or wok over medium heat. Add aromatics (onion, garlic, ginger if using) and sauté for 2-3 minutes until fragrant and translucent.",
-        "why": "Aromatics form the backbone of Fusion cuisine — they release essential oils when gently heated.",
-        "tip": "Keep the heat at medium. Burnt garlic turns bitter and ruins the dish."
-      },
-      {
-        "step": 3,
-        "title": "Add Spices & Seasonings",
-        "instruction": "Add the dry spices and seasonings. Stir constantly for 30-60 seconds to bloom the spices and release their full aroma.",
-        "why": "Blooming spices in oil activates fat-soluble flavor compounds that water alone cannot extract.",
-        "tip": "If spices start to smoke, reduce heat immediately and add a splash of water."
-      },
-      {
-        "step": 4,
-        "title": "Cook the Main Protein",
-        "instruction": "Add your protein to the pan. Cook for 5-7 minutes, turning occasionally, until golden on the outside. Season lightly as you go.",
-        "why": "Browning creates a Maillard reaction — complex flavors that elevate the entire dish.",
-        "tip": "Don't move the protein too much — let it develop a golden crust before flipping."
-      },
-      {
-        "step": 5,
-        "title": "Combine & Simmer",
-        "instruction": "Add remaining ingredients (sauces, liquids, vegetables). Stir to combine, bring to a gentle simmer, and cook for 10-15 minutes with the lid partially on.",
-        "why": "Simmering allows all the flavors to meld together into a harmonious, well-rounded dish.",
-        "tip": "Taste and adjust seasoning — a squeeze of lemon or pinch of sugar can balance flavors."
-      },
-      {
-        "step": 6,
-        "title": "Plate & Serve",
-        "instruction": "Remove from heat. Plate your Butter Chicken beautifully and garnish with fresh herbs. Serve immediately while hot.",
-        "why": "Presentation matters — we eat with our eyes first, and fresh garnishes add brightness.",
-        "tip": "A final drizzle of quality oil or a squeeze of citrus can elevate the dish dramatically."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_9143079916",
-    "name": "Egg Noodles",
-    "category": "non-vegetarian",
-    "cuisine": "Fusion",
-    "image": "✨",
-    "duration": "40 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "fusion"
-    ],
-    "ingredients": [
-      "2 tbsp vegetable oil",
-      "1 medium onion, diced",
-      "3 cloves garlic, minced",
-      "1 tsp salt",
-      "1/2 tsp black pepper",
-      "1 tsp paprika",
-      "4 large eggs",
-      "2 cups mixed vegetables",
-      "1 cup broth or water",
-      "Fresh herbs for garnish"
-    ],
-    "nutrition": {
-      "calories": 380,
-      "protein": 28,
-      "carbohydrates": 40,
-      "fats": 14,
-      "fiber": 3,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium, Potassium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Prep Ingredients",
-        "instruction": "Gather all ingredients for Egg Noodles. Wash, peel, and chop vegetables. Measure out spices and sauces. Pat protein dry if using meat or press tofu if using tofu.",
-        "why": "Proper mise en place ensures smooth cooking without scrambling for ingredients mid-recipe.",
-        "tip": "Read through all the steps once before starting to cook."
-      },
-      {
-        "step": 2,
-        "title": "Build the Flavor Base",
-        "instruction": "Heat oil in a large pan or wok over medium heat. Add aromatics (onion, garlic, ginger if using) and sauté for 2-3 minutes until fragrant and translucent.",
-        "why": "Aromatics form the backbone of Fusion cuisine — they release essential oils when gently heated.",
-        "tip": "Keep the heat at medium. Burnt garlic turns bitter and ruins the dish."
-      },
-      {
-        "step": 3,
-        "title": "Add Spices & Seasonings",
-        "instruction": "Add the dry spices and seasonings. Stir constantly for 30-60 seconds to bloom the spices and release their full aroma.",
-        "why": "Blooming spices in oil activates fat-soluble flavor compounds that water alone cannot extract.",
-        "tip": "If spices start to smoke, reduce heat immediately and add a splash of water."
-      },
-      {
-        "step": 4,
-        "title": "Cook the Main Protein",
-        "instruction": "Add your protein to the pan. Cook for 5-7 minutes, turning occasionally, until golden on the outside. Season lightly as you go.",
-        "why": "Browning creates a Maillard reaction — complex flavors that elevate the entire dish.",
-        "tip": "Don't move the protein too much — let it develop a golden crust before flipping."
-      },
-      {
-        "step": 5,
-        "title": "Combine & Simmer",
-        "instruction": "Add remaining ingredients (sauces, liquids, vegetables). Stir to combine, bring to a gentle simmer, and cook for 10-15 minutes with the lid partially on.",
-        "why": "Simmering allows all the flavors to meld together into a harmonious, well-rounded dish.",
-        "tip": "Taste and adjust seasoning — a squeeze of lemon or pinch of sugar can balance flavors."
-      },
-      {
-        "step": 6,
-        "title": "Plate & Serve",
-        "instruction": "Remove from heat. Plate your Egg Noodles beautifully and garnish with fresh herbs. Serve immediately while hot.",
-        "why": "Presentation matters — we eat with our eyes first, and fresh garnishes add brightness.",
-        "tip": "A final drizzle of quality oil or a squeeze of citrus can elevate the dish dramatically."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_76d788a260",
-    "name": "Lamb Biryani",
-    "category": "non-vegetarian",
-    "cuisine": "India",
-    "image": "🍽️",
-    "duration": "45 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "india"
-    ],
-    "ingredients": [
-      "12 Cashew nuts",
-      "½ tbsp Khus khus",
-      "½ tbsp Cumin seeds",
-      "3 sliced thinly Onions",
-      "2 tsp Ginger garlic paste",
-      "4 whole Garlic",
-      "Leaves Mint",
-      "Leaves Cilantro",
-      "½ tsp dissolved in ½ cup warm milk Saffron",
-      "2 tbsp Ghee",
-      "2 Cups Basmati rice",
-      "½ cup Full fat yogurt",
-      "1 tbsp Cumin Seeds",
-      "½ Bay leaf",
-      "1 thin piece Cinnamon",
-      "3 Cloves",
-      "2 Cardamom",
-      "1 lb Lamb",
-      "1 tsp Red Chilli powder",
-      "1 tbsp Biryani masala"
-    ],
-    "nutrition": {
-      "calories": 400,
-      "protein": 20,
-      "carbohydrates": 45,
-      "fats": 15,
-      "fiber": 5,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Step 1",
-        "instruction": "Grind the cashew, poppy seeds and cumin seeds into a smooth paste, using as little water as possible. Set aside.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 2,
-        "title": "Step 2",
-        "instruction": "Deep fry the sliced onions when it is hot. Don’t overcrowd the oil. When the onions turn light brown, remove from oil and drain on paper towel. The fried onion will crisp up as it drains. Also fry the cashewnuts till golden brown. Set aside.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 3,
-        "title": "Step 3",
-        "instruction": "Wash the rice and soak in water for twenty minutes.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 4,
-        "title": "Step 4",
-        "instruction": "Meanwhile, take a big wide pan, add oil in medium heat, add the sliced onions, add the blended paste, to it add the green chillies, ginger garlic paste and garlic and fry for a minute.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 5,
-        "title": "Step 5",
-        "instruction": "Then add the tomatoes and sauté them well till they are cooked and not mushy.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 6,
-        "title": "Step 6",
-        "instruction": "Then to it add the red chilli powder, biryani powder, mint, coriander leaves and sauté them well.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Layer Chicken and Rice",
+        "instruction": "Once the basmati rice and chicken are cooked, layer them in a large pot or Dutch oven. Start with a layer of rice, then a layer of chicken, sprinkling some fried onions and coriander leaves in between each layer.",
+        "why": "This creates the iconic layered structure of the biryani.",
+        "tip": "Use a mixture of basmati and other long grain rice for extra texture."
       },
       {
         "step": 7,
-        "title": "Step 7",
-        "instruction": "Add the yogurt and mix well. I always move the skillet away from the heat when adding yogurt which prevents it from curdling.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Steam the Biryani",
+        "instruction": "Close the pot with a tight-fitting lid and let it steam on low heat for 15-20 minutes. This helps to infuse the flavors of the spices into the rice and chicken.",
+        "why": "Steaming brings out the hidden flavors and adds texture to the biryani.",
+        "tip": "You can also use a bamboo steamer for added flavor and texture."
       },
       {
         "step": 8,
-        "title": "Step 8",
-        "instruction": "Now after returning the skillet back to the stove, add the washed lamb and salt and ½ cup water and mix well. Cook for 1 hour and cook it covered in medium low heat or put it in a pressure cooker for 6 whistles. If the water is not drained totally, heat it by keeping it open.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 9,
-        "title": "Step 9",
-        "instruction": "Take another big pan, add thrice the cup of rice you use, and boil it. When it is boiling high, add the rice, salt and jeera and mix well. After 7 minutes exact or when the rice is 80% done. Switch off and drain the rice.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 10,
-        "title": "Step 10",
-        "instruction": "Now, the layering starts. To the lamb, pat and level it. Add the drained hot rice on the top of it. Garnish with fried onions, ghee, mint, coriander leaves and saffron dissolved in milk.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 11,
-        "title": "Step 11",
-        "instruction": "Cover the dish and bake in a 350f oven for 15 minutes or till the cooked but not mushy. Or cook in the stove medium heat for 12 minutes and lowest heat for 5 minutes. And switch off. Mix and serve hot!",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 12,
-        "title": "Step 12",
-        "instruction": "Notes",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 13,
-        "title": "Step 13",
-        "instruction": "1. If you are cooking in oven, do make sure to cook in a big oven safe pan and cover it tight and then keep in oven for the final step.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 14,
-        "title": "Step 14",
-        "instruction": "2. You can skip biryani masala if you don’t have and add just garam masala (1 tsp and red chilli powder – 3 tsp instead of 1 tsp)",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 15,
-        "title": "Step 15",
-        "instruction": "3. If it is spicy in the end, squeeze some lemon, it will reduce the heat and enhance the flavors also.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Serve Hot",
+        "instruction": "Finally, open the lid and gently mix the rice and chicken together. Garnish with chopped fresh coriander leaves and a sprinkle of saffron water. Serve hot and enjoy!",
+        "why": "This adds the final flourish to the dish and makes it presentable.",
+        "tip": "Serve with a side of yogurt or raita to balance the spice levels."
       }
     ],
     "is_favorite": false,
     "ai_generated": true
   },
   {
-    "id": "ai_bb8f5d94eb",
-    "name": "Katsu Chicken curry",
+    "id": "ai_3ec9f5124e",
+    "name": "Chicken Manchurian",
     "category": "non-vegetarian",
-    "cuisine": "Japanese",
-    "image": "🍱",
-    "duration": "45 mins",
+    "cuisine": "Chinese/Indian Fusion",
+    "image": "🍽️",
+    "duration": "35-40 mins",
     "difficulty": "Medium",
     "servings": 4,
     "tags": [
       "AI-generated",
-      "japanese"
+      "chinese/indian fusion"
     ],
     "ingredients": [
-      "4 pounded to 1cm thickness chicken breast",
-      "2 tablespoons plain flour",
-      "1 beaten egg",
-      "100g fine breadcrumbs",
-      "230ml frying vegetable oil",
-      "2 tablespoons sunflower oil",
-      "2 sliced onions",
-      "5 chopped cloves garlic",
-      "2 sliced carrot",
-      "2 tablespoons plain flour",
-      "4 teaspoons curry powder",
-      "600ml chicken stock",
-      "2 teaspoons honey",
-      "4 teaspoons soy sauce",
-      "1 bay leaf",
-      "1 teaspoon garam masala"
+      "500g boneless chicken breast pieces",
+      "1/2 cup all-purpose flour",
+      "2 tsp cornstarch",
+      "1 tsp ground ginger powder",
+      "1 tsp soy sauce",
+      "1 tsp vinegar",
+      "1 tsp tomato ketchup",
+      "2 tsp chilli sauce",
+      "2 tbsp butter",
+      "2 tbsp vegetable oil",
+      "2 cloves garlic, minced",
+      "1 small onion, finely chopped",
+      "2 small tomatoes, chopped",
+      "2 tbsp chopped scallions",
+      "Salt, to taste",
+      "Black pepper, to taste"
     ],
     "nutrition": {
-      "calories": 400,
-      "protein": 20,
-      "carbohydrates": 45,
-      "fats": 15,
-      "fiber": 5,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium"
+      "calories": 560,
+      "protein": 40,
+      "carbohydrates": 35,
+      "fats": 25,
+      "fiber": 3,
+      "vitamins": "A, C",
+      "minerals": "Iron, Potassium"
     },
     "steps": [
       {
         "step": 1,
-        "title": "Step 1",
-        "instruction": "Prep:15min  ›  Cook:30min  ›  Ready in:45min",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Prepare the Marinade",
+        "instruction": "In a bowl, mix together 1/2 cup of gram flour, 1 tsp of ginger powder, salt, and black pepper. Add the chicken pieces and mix well to coat evenly. Let it marinate for at least 15 minutes.",
+        "why": "The marinade helps to tenderize the chicken and adds flavor to the dish.",
+        "tip": "You can adjust the amount of ginger powder and chilli sauce according to your taste."
       },
       {
         "step": 2,
-        "title": "Step 2",
-        "instruction": "For the curry sauce: Heat oil in medium non-stick saucepan, add onion and garlic and cook until softened. Stir in carrots and cook over low heat for 10 to 12 minutes.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Make the Sauce",
+        "instruction": "In a small bowl, combine 2 tbsp of soy sauce, 1 tsp of vinegar, 1 tsp of tomato ketchup, and 2 tsp of chilli sauce. Mix well.",
+        "why": "The sauce adds a sweet and tangy flavor to the dish.",
+        "tip": "You can adjust the amount of chilli sauce according to your taste."
       },
       {
         "step": 3,
-        "title": "Step 3",
-        "instruction": "Add flour and curry powder; cook for 1 minute. Gradually stir in stock until combined; add honey, soy sauce and bay leaf. Slowly bring to the boil.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Cook the Chicken",
+        "instruction": "Heat 1 tsp of vegetable oil in a pan over medium heat. Remove the chicken from the marinade and cook until it's golden brown and cooked through.",
+        "why": "Cooking the chicken in a pan helps to crisp the outside and keep the inside tender.",
+        "tip": "Don't overcook the chicken."
       },
       {
         "step": 4,
-        "title": "Step 4",
-        "instruction": "Turn down heat and simmer for 20 minutes or until sauce thickens but is still of pouring consistency. Stir in garam masala. Pour the curry sauce through a sieve; return to saucepan and keep on low heat until ready to serve.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Make the Garnish",
+        "instruction": "Heat 1 tsp of butter in a pan over medium heat. Add 2 cloves of minced garlic and sauté for 1 minute.",
+        "why": "The garlic adds flavor to the dish and helps to balance the sweetness of the sauce.",
+        "tip": "Use high-quality garlic for the best flavor."
       },
       {
         "step": 5,
-        "title": "Step 5",
-        "instruction": "For the chicken: Season both sides of chicken breasts with salt and pepper. Place flour, egg and breadcrumbs in separate bowls and arrange in a row. Coat the chicken breasts in flour, then dip them into the egg, then coat in breadcrumbs, making sure you cover both sides.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Mix the Sauce and Gravy",
+        "instruction": "Add 2 tbsp of soy sauce, 1 tsp of vinegar, and 2 tsp of tomato ketchup to the pan with the garlic. Mix well to combine.",
+        "why": "The sauce and gravy help to moisten the dish and add flavor.",
+        "tip": "You can adjust the amount of soy sauce and chilli sauce according to your taste."
       },
       {
         "step": 6,
-        "title": "Step 6",
-        "instruction": "Heat oil in large frying pan over medium-high heat. Place chicken into hot oil and cook until golden brown, about 3 or 4 minutes each side. Once cooked, place on kitchen paper to absorb excess oil.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Add the Chopped Vegetables",
+        "instruction": "Add 1 small onion and 2 small tomatoes to the pan and sauté until they're tender.",
+        "why": "The vegetables add texture and flavor to the dish.",
+        "tip": "Use high-quality vegetables for the best flavor."
       },
       {
         "step": 7,
-        "title": "Step 7",
-        "instruction": "Pour curry sauce over chicken, serve with white rice and enjoy!",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_76aba95cba",
-    "name": "Spinach & Ricotta Cannelloni",
-    "category": "vegetarian",
-    "cuisine": "Italian",
-    "image": "🍝",
-    "duration": "45 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "italian"
-    ],
-    "ingredients": [
-      "3 tbsp Olive Oil",
-      "8 cloves chopped Garlic",
-      "3 tbsp Caster Sugar",
-      "2 tblsp Red Wine Vinegar",
-      "3 400g Cans Chopped Tomatoes",
-      "Bunch Basil Leaves",
-      "2 tubs Mascarpone",
-      "3 tbsp Milk",
-      "85g Parmesan",
-      "2 sliced Mozzarella",
-      "1kg Spinach",
-      "100g Parmesan",
-      "3 tubs Ricotta",
-      "pinch Nutmeg",
-      "400g Cannellini Beans"
-    ],
-    "nutrition": {
-      "calories": 400,
-      "protein": 20,
-      "carbohydrates": 45,
-      "fats": 15,
-      "fiber": 5,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Step 1",
-        "instruction": "First make the tomato sauce. Heat the oil in a large pan and fry the garlic for 1 min. Add the sugar, vinegar, tomatoes and some seasoning and simmer for 20 mins, stirring occasionally, until thick. Add the basil and divide the sauce between 2 or more shallow ovenproof dishes (see Tips for freezing, below). Set aside. Make a sauce by beating the mascarpone with the milk until smooth, season, then set aside.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 2,
-        "title": "Step 2",
-        "instruction": "Put the spinach in a large colander and pour over a kettle of boiling water to wilt it (you may need to do this in batches). When cool enough to handle squeeze out the excess water. Roughly chop the spinach and mix in a large bowl with 100g Parmesan and ricotta. Season well with salt, pepper and the nutmeg.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 3,
-        "title": "Step 3",
-        "instruction": "Heat oven to 200C/180C fan/gas 6. Using a piping bag or plastic food bag with the corner snipped off, squeeze the filling into the cannelloni tubes. Lay the tubes, side by side, on top of the tomato sauce and spoon over the mascarpone sauce. Top with Parmesan and mozzarella. You can now freeze the cannelloni, uncooked, or you can cook it first and then freeze. Bake for 30-35 mins until golden and bubbling. Remove from oven and let stand for 5 mins before serving.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      }
-    ],
-    "is_favorite": false,
-    "ai_generated": true
-  },
-  {
-    "id": "ai_871235bcf9",
-    "name": "Mediterranean Pasta Salad",
-    "category": "non-vegetarian",
-    "cuisine": "Italian",
-    "image": "🍝",
-    "duration": "45 mins",
-    "difficulty": "Medium",
-    "servings": 4,
-    "tags": [
-      "AI-generated",
-      "italian"
-    ],
-    "ingredients": [
-      "200 g mozzarella balls",
-      "250 g baby plum tomatoes",
-      "1  bunch fresh basil",
-      "350 g farfalle",
-      "3  tablespoons extra virgin olive oil",
-      "40 g Green Olives",
-      "200 g tuna",
-      "to taste salt",
-      "to taste pepper"
-    ],
-    "nutrition": {
-      "calories": 400,
-      "protein": 20,
-      "carbohydrates": 45,
-      "fats": 15,
-      "fiber": 5,
-      "vitamins": "A, B, C",
-      "minerals": "Iron, Calcium"
-    },
-    "steps": [
-      {
-        "step": 1,
-        "title": "Step 1",
-        "instruction": "Bring a large saucepan of salted water to the boil",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 2,
-        "title": "Step 2",
-        "instruction": "Add the pasta, stir once and cook for about 10 minutes or as directed on the packet.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 3,
-        "title": "Step 3",
-        "instruction": "Meanwhile, wash the tomatoes and cut into quarters. Slice the olives. Wash the basil.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 4,
-        "title": "Step 4",
-        "instruction": "Put the tomatoes into a salad bowl and tear the basil leaves over them. Add a tablespoon of olive oil and mix.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 5,
-        "title": "Step 5",
-        "instruction": "When the pasta is ready, drain into a colander and run cold water over it to cool it quickly.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 6,
-        "title": "Step 6",
-        "instruction": "Toss the pasta into the salad bowl with the tomatoes and basil.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
-      },
-      {
-        "step": 7,
-        "title": "Step 7",
-        "instruction": "Add the sliced olives, drained mozzarella balls, and chunks of tuna. Mix well and let the salad rest for at least half an hour to allow the flavours to mingle.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Add the Sauce and Chicken",
+        "instruction": "Add the prepared sauce and the cooked chicken to the pan with the vegetables. Mix well to combine.",
+        "why": "The sauce and chicken help to moisten the dish and add flavor.",
+        "tip": "You can adjust the amount of sauce according to your taste."
       },
       {
         "step": 8,
-        "title": "Step 8",
-        "instruction": "Sprinkle the pasta with a generous grind of black pepper and drizzle with the remaining olive oil just before serving.",
-        "why": "Follow the authentic recipe for best results.",
-        "tip": "Adjust seasoning to your taste as you cook."
+        "title": "Serve and Garnish",
+        "instruction": "Transfer the Chicken Manchurian to a serving platter and garnish with 2 tbsp of chopped scallions. Serve immediately.",
+        "why": "The scallions add flavor and texture to the dish.",
+        "tip": "Use fresh scallions for the best flavor."
+      }
+    ],
+    "is_favorite": false,
+    "ai_generated": true
+  },
+  {
+    "id": "ai_a5bcf73178",
+    "name": "Fish Fry",
+    "category": "Non-Vegetarian",
+    "cuisine": "American",
+    "image": "🍔",
+    "duration": "25 mins",
+    "difficulty": "Medium",
+    "servings": 4,
+    "tags": [
+      "AI-generated",
+      "american"
+    ],
+    "ingredients": [
+      "1 pound (450g) cod or haddock fillets, cut into 1-inch (2.5 cm) pieces",
+      "1 1/2 cups all-purpose flour",
+      "1 teaspoon paprika",
+      "1/2 teaspoon garlic powder",
+      "1/2 teaspoon onion powder",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon black pepper",
+      "1 cup buttermilk",
+      "1 cup panko breadcrumbs",
+      "2 eggs",
+      "Vegetable oil for frying",
+      "Lemon wedges for serving"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 35,
+      "carbohydrates": 20,
+      "fats": 12,
+      "fiber": 0,
+      "vitamins": "B12, D",
+      "minerals": "Selenium, Phosphorus"
+    },
+    "steps": [
+      {
+        "step": 1,
+        "title": "Prepare the coating",
+        "instruction": "In a shallow dish, mix together the flour, paprika, garlic powder, onion powder, salt, and pepper.",
+        "why": "A good coating is essential for a crispy fish fry.",
+        "tip": "Use a combination of flour and spices for a more flavorful coating."
+      },
+      {
+        "step": 2,
+        "title": "Prepare the buttermilk",
+        "instruction": "In a separate shallow dish, whisk together the buttermilk and eggs.",
+        "why": "Soaking the fish in buttermilk helps to tenderize it and creates a crispy coating.",
+        "tip": "Make sure to mix the buttermilk and eggs well before adding the fish."
+      },
+      {
+        "step": 3,
+        "title": "Prepare the breadcrumbs",
+        "instruction": "In a third shallow dish, place the panko breadcrumbs.",
+        "why": "Panko breadcrumbs provide a light and crispy coating.",
+        "tip": "Use fresh breadcrumbs for the best results."
+      },
+      {
+        "step": 4,
+        "title": "Dredge the fish in flour",
+        "instruction": "Dredge the fish pieces in the flour mixture, shaking off any excess.",
+        "why": "Coating the fish in flour helps the breading stick.",
+        "tip": "Don't overcoat the fish with flour, or the breading may not stick well."
+      },
+      {
+        "step": 5,
+        "title": "Soak the fish in buttermilk",
+        "instruction": "Soak the floured fish pieces in the buttermilk mixture for at least 30 minutes.",
+        "why": "The acidity in the buttermilk helps to break down the proteins in the fish, making it tender and moist.",
+        "tip": "Make sure the fish is fully submerged in the buttermilk mixture."
+      },
+      {
+        "step": 6,
+        "title": "Dredge the fish in breadcrumbs",
+        "instruction": "Remove the fish from the buttermilk mixture, letting any excess liquid drip off.",
+        "why": "A good coating is essential for a crispy fish fry.",
+        "tip": "Press the breadcrumbs gently onto the fish to ensure they stick."
+      },
+      {
+        "step": 7,
+        "title": "Heat the oil",
+        "instruction": "Heat about 1/2-inch (1 cm) of vegetable oil in a large skillet over medium-high heat until it reaches 350°F (180°C).",
+        "why": "The oil needs to be hot enough to fry the fish quickly and get a crispy coating.",
+        "tip": "Use a thermometer to ensure the oil has reached the correct temperature."
+      },
+      {
+        "step": 8,
+        "title": "Fry the fish",
+        "instruction": "Carefully place the breaded fish pieces in the hot oil and fry for 2-3 minutes on each side, or until golden brown and cooked through.",
+        "why": "Frying the fish in hot oil creates a crispy and golden-brown coating.",
+        "tip": "Don't overcrowd the skillet, fry the fish in batches if necessary."
       }
     ],
     "is_favorite": false,

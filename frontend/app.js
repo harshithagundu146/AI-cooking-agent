@@ -175,33 +175,42 @@ async function loadRecipes() {
   filterByCuisine(cuisine);
 }
 
-async function generateAIRecipe() {
-  const query = window.prompt("🧑‍🍳 What dish would you like the AI Chef to create? (e.g. 'Butter Chicken', 'Tiramisu', 'Pad Thai')");
+async function aiSearchRecipe(query) {
   if (!query || !query.trim()) return;
+  query = query.trim();
 
-  const btn = document.getElementById('gen-ai-btn');
-  if (btn) btn.innerHTML = '🤖 AI is creating your recipe...';
+  const grid = document.getElementById('recipe-grid');
+  if (grid) {
+    grid.innerHTML = `
+      <div style="grid-column:1/-1;text-align:center;padding:3rem 1rem;color:var(--pink-600)">
+        <div style="font-size:3rem;animation:spin 1.5s linear infinite;display:inline-block">🤖</div>
+        <p style="font-size:1.1rem;font-weight:600;margin-top:1rem">AI is creating your "${query}" recipe...</p>
+        <p style="font-size:.9rem;color:var(--text-light);margin-top:.5rem">Searching recipe databases + building custom recipe</p>
+      </div>`;
+  }
 
   try {
     const res = await fetch(`${API}/recipes/ai-generate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: query.trim(), servings: 4 })
+      body: JSON.stringify({ query, servings: 4 })
     });
+    if (!res.ok) throw new Error('Server error');
     const newRecipe = await res.json();
-    
+
     // Add to state
     if (!state.recipes.find(r => r.id === newRecipe.id)) {
       state.recipes.unshift(newRecipe);
     }
-    
-    // Open the recipe immediately!
+
+    // Open the recipe immediately
     openRecipe(newRecipe.id);
   } catch(e) {
     console.error(e);
-    alert('Failed to generate recipe. Please try again.');
+    if (grid) {
+      grid.innerHTML = '<p style="text-align:center;color:var(--text-light);grid-column:1/-1;padding:2rem">Failed to generate recipe. Please try again.</p>';
+    }
   }
-  if (btn) btn.innerHTML = '✨ Generate AI Recipe';
 }
 
 function renderRecipes(recipes, containerId = 'recipe-grid') {
@@ -266,6 +275,9 @@ async function openRecipe(id) {
     }
   }
   state.currentRecipe = recipe;
+  state.baseServings = recipe.servings || 4;
+  state.servings = state.baseServings;
+  
   const c = document.getElementById('recipe-detail-content');
   const nut = recipe.nutrition || {};
 
@@ -286,9 +298,22 @@ async function openRecipe(id) {
         <span class="info-badge">${recipe.category==='vegetarian'?'🥬 Veg':'🍗 Non-Veg'}</span>
       </div>
     </div>
+    <div class="servings-adjuster">
+      <h2>👥 Adjust Servings</h2>
+      <div class="servings-controls">
+        <button class="servings-btn" onclick="updateServings(Math.max(1, state.servings - 1))">−</button>
+        <div class="servings-display">
+          <span class="servings-count" id="servings-count">${state.servings}</span>
+          <span class="servings-label">people</span>
+        </div>
+        <button class="servings-btn" onclick="updateServings(Math.min(20, state.servings + 1))">+</button>
+      </div>
+      <input type="range" class="servings-slider" id="servings-slider" min="1" max="20" value="${state.servings}" oninput="updateServings(parseInt(this.value))">
+      <div class="servings-people" id="servings-people">${'👤'.repeat(Math.min(10, state.servings))}${state.servings > 10 ? '...' : ''}</div>
+    </div>
     <div class="detail-section">
       <h2>🧾 Ingredients</h2>
-      <ul class="ingredient-list">${(recipe.ingredients||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
+      <ul class="ingredient-list" id="ingredient-list">${(recipe.ingredients||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
     </div>
     <div class="detail-section">
       <h2>📊 Nutrition Per Serving</h2>
@@ -308,6 +333,70 @@ async function openRecipe(id) {
       <button class="btn btn-primary btn-cook" onclick="openCookingSteps()">👨‍🍳 Start Cooking</button>
     </div>`;
   navigateTo('recipe-detail-page');
+}
+
+function scaleIngredientQuantity(str, scale) {
+  if (scale === 1) return str;
+  // Match a leading number/fraction, e.g. "2", "1/2", "1.5"
+  return str.replace(/^([\d\/\.]+)\s*/, (match, numStr) => {
+    let num;
+    if (numStr.includes('/')) {
+      const parts = numStr.split('/');
+      num = parseFloat(parts[0]) / parseFloat(parts[1]);
+    } else {
+      num = parseFloat(numStr);
+    }
+    if (isNaN(num)) return match;
+    let scaled = num * scale;
+    // Format nicely
+    if (scaled % 1 !== 0) {
+      if (Math.abs(scaled - 0.25) < 0.01) scaled = '1/4';
+      else if (Math.abs(scaled - 0.33) < 0.01) scaled = '1/3';
+      else if (Math.abs(scaled - 0.5) < 0.01) scaled = '1/2';
+      else if (Math.abs(scaled - 0.66) < 0.01) scaled = '2/3';
+      else if (Math.abs(scaled - 0.75) < 0.01) scaled = '3/4';
+      else scaled = parseFloat(scaled.toFixed(1));
+    }
+    return scaled + ' ';
+  });
+}
+
+function updateServings(newServings) {
+  state.servings = newServings;
+  const scale = newServings / state.baseServings;
+  const recipe = state.currentRecipe;
+  const nut = recipe.nutrition || {};
+
+  // Update UI
+  document.getElementById('servings-count').textContent = newServings;
+  document.getElementById('servings-slider').value = newServings;
+  document.getElementById('servings-people').textContent = '👤'.repeat(Math.min(10, newServings)) + (newServings > 10 ? '...' : '');
+
+  // Scale ingredients
+  const scaledIngredients = (recipe.ingredients || []).map(i => scaleIngredientQuantity(i, scale));
+  document.getElementById('ingredient-list').innerHTML = scaledIngredients.map(i => `<li>${i}</li>`).join('');
+
+  // Scale nutrition
+  const scaledNut = {
+    calories: Math.round((nut.calories || 0) * scale),
+    protein: Math.round((nut.protein || 0) * scale),
+    carbohydrates: Math.round((nut.carbohydrates || 0) * scale),
+    fats: Math.round((nut.fats || 0) * scale),
+    fiber: Math.round((nut.fiber || 0) * scale),
+    vitamins: nut.vitamins || '—'
+  };
+
+  const nutGrid = document.querySelector('.nutrition-grid');
+  if (nutGrid) {
+    nutGrid.innerHTML = `
+        <div class="nutrition-item"><div class="value">${scaledNut.calories}</div><div class="label">Calories</div></div>
+        <div class="nutrition-item"><div class="value">${scaledNut.protein}g</div><div class="label">Protein</div></div>
+        <div class="nutrition-item"><div class="value">${scaledNut.carbohydrates}g</div><div class="label">Carbs</div></div>
+        <div class="nutrition-item"><div class="value">${scaledNut.fats}g</div><div class="label">Fats</div></div>
+        <div class="nutrition-item"><div class="value">${scaledNut.fiber}g</div><div class="label">Fiber</div></div>
+        <div class="nutrition-item"><div class="value">${scaledNut.vitamins}</div><div class="label">Vitamins</div></div>
+    `;
+  }
 }
 
 

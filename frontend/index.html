@@ -245,8 +245,7 @@
         <nav class="top-nav">
             <span class="nav-logo" onclick="navigateTo('recipes-page')">🍳 AI Cooking Agent</span>
             <div class="search-bar">
-                <input type="text" id="search-input" placeholder="✨ AI Search (e.g., 'spicy indian chicken' or 'sweet french dessert')..." oninput="searchRecipes(this.value)">
-                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="🔍 Search or type any dish to generate (e.g., 'Butter Chicken', 'Pad Thai')..." oninput="searchRecipes(this.value)" onkeydown="if(event.key==='Enter'){event.preventDefault();aiSearchRecipe(this.value);}">
             </div>
             <div id="google_translate_element" style="margin-left: 10px;"></div>
             <div class="nav-actions">
@@ -260,9 +259,6 @@
         <div class="recipes-container">
             <h1 class="section-title">Recommended For You</h1>
             <p class="section-subtitle" id="recipes-subtitle">Based on your preferences</p>
-            <div style="text-align:center; margin-bottom: 2rem;">
-                <button id="gen-ai-btn" class="btn btn-primary" onclick="generateAIRecipe()">✨ Generate AI Recipe</button>
-            </div>
 
             <div class="recipe-grid" id="recipe-grid"></div>
         </div>
@@ -386,6 +382,6 @@
 
     <div id="toast-container" class="toast-container"></div>
 
-    <script src="app.js?v=20260607c"></script>
+    <script src="app.js?v=20260607e"></script>
 </body>
 </html>

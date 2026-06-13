@@ -4,3 +4,4 @@ pymongo==4.17.0
 bcrypt==5.0.0
 pyjwt==2.12.1
 gunicorn==21.2.0
+groq==1.4.0

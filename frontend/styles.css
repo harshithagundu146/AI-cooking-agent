@@ -157,11 +157,15 @@ body{font-family:var(--font);background:linear-gradient(135deg,var(--pink-50),va
 .nav-back{background:none;border:none;font-family:var(--font);font-size:1rem;color:var(--pink-600);cursor:pointer;font-weight:600}
 .nav-back:hover{color:var(--pink-700)}
 .nav-actions{display:flex;gap:.5rem}
-.search-bar{position:relative;flex:0 1 320px}
-.search-bar input{width:100%;padding:.6rem 1rem .6rem 2.5rem;border:1.5px solid var(--pink-200);border-radius:50px;
+.search-bar{position:relative;flex:0 1 420px;display:flex;align-items:center}
+.search-bar input{width:100%;padding:.6rem 3rem .6rem 1rem;border:1.5px solid var(--pink-200);border-radius:50px;
   background:var(--pink-50);font-family:var(--font);font-size:.95rem;outline:none;transition:all .3s}
 .search-bar input:focus{border-color:var(--pink-400);box-shadow:0 0 0 3px rgba(255,112,150,.12)}
-.search-icon{position:absolute;left:.8rem;top:50%;transform:translateY(-50%);font-size:1rem}
+.search-generate-btn{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:34px;height:34px;
+  border:none;border-radius:50%;background:linear-gradient(135deg,var(--pink-400),var(--pink-600));color:#fff;
+  font-size:1.1rem;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(255,71,120,.3)}
+.search-generate-btn:hover{transform:translateY(-50%) scale(1.1);box-shadow:0 4px 15px rgba(255,71,120,.4)}
 
 /* ===== RECIPE GRID ===== */
 .recipes-container{max-width:1100px;width:100%;padding:2rem;margin:0 auto}
