@@ -23,23 +23,25 @@ def _make_token(user_id, username):
 def register():
     data = request.get_json()
     username = data.get('username', '').strip()
-    email = data.get('email', '').strip()
     password = data.get('password', '')
-    if not username or not email or not password:
+    if not username or not password:
         return jsonify({"error": "All fields are required"}), 400
+
+    if not username[0].isalpha():
+        return jsonify({"error": "Username must start with an alphabet letter"}), 400
 
     db = get_db()
     if db is not None:
-        if db.users.find_one({"$or": [{"username": username}, {"email": email}]}):
+        if db.users.find_one({"username": username}):
             return jsonify({"error": "User already exists"}), 409
         user_id = str(uuid.uuid4())
-        db.users.insert_one({"user_id": user_id, "username": username, "email": email, "password": _hash_pw(password), "is_new": True})
+        db.users.insert_one({"user_id": user_id, "username": username, "password": _hash_pw(password), "is_new": True})
     else:
         store = get_memory_store()
         if username in store["users"]:
             return jsonify({"error": "User already exists"}), 409
         user_id = str(uuid.uuid4())
-        store["users"][username] = {"user_id": user_id, "username": username, "email": email, "password": _hash_pw(password), "is_new": True}
+        store["users"][username] = {"user_id": user_id, "username": username, "password": _hash_pw(password), "is_new": True}
 
     token = _make_token(user_id, username)
     return jsonify({"token": token, "username": username, "user_id": user_id, "is_new": True}), 201

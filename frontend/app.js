@@ -37,10 +37,16 @@ async function handleLogin(e) {
 async function handleRegister(e) {
   e.preventDefault();
   const msg = document.getElementById('register-message');
+  const username = document.getElementById('reg-username').value;
+  if (!/^[a-zA-Z]/.test(username)) {
+    msg.textContent = 'Username must start with an alphabet letter (a–z or A–Z).';
+    msg.className = 'auth-message error';
+    return;
+  }
   try {
     const res = await fetch(`${API}/auth/register`, {
       method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ username: document.getElementById('reg-username').value, email: document.getElementById('reg-email').value, password: document.getElementById('reg-password').value })
+      body: JSON.stringify({ username, password: document.getElementById('reg-password').value })
     });
     const data = await res.json();
     if (!res.ok) { msg.textContent = data.error; msg.className = 'auth-message error'; return; }
@@ -446,7 +452,7 @@ function openIngredientCheck() {
   c.innerHTML = `
     <h2>🔍 What ingredients do you have?</h2>
     <p style="color:var(--text-light);margin-bottom:.5rem">For: <strong>${recipe.name}</strong></p>
-    <p style="color:var(--text-light);font-size:.9rem">Required: ${recipe.ingredients.join(', ')}</p>
+    <p style="color:var(--text-light);font-size:.9rem">Required: ${recipe.ingredients.map(i => typeof i === 'string' ? i : (i.name || JSON.stringify(i))).join(', ')}</p>
     
     <div style="margin: 1.5rem 0; padding: 1.5rem; background: var(--pink-50); border: 2px dashed var(--pink-300); border-radius: var(--radius-sm); text-align: center;">
       <h3 style="color:var(--pink-600); margin-bottom:.5rem;">📷 AI Image Recognition</h3>
@@ -473,8 +479,8 @@ async function analyzeFridgeImage(event) {
   
   status.innerHTML = '✨ AI is scanning your ingredients...';
   
-  // Simulate AI Computer Vision delay (2 seconds)
-  await new Promise(r => setTimeout(r, 2000));
+  // Simulate AI Computer Vision delay (reduced for speed)
+  await new Promise(r => setTimeout(r, 200));
   
   // Simulated AI detected ingredients based on common items
   const detected = ["tomato", "onion", "garlic", "milk", "eggs", "butter", "bell pepper", "chicken"];
@@ -494,44 +500,86 @@ async function analyzeFridgeImage(event) {
   }
 }
 
-async function checkIngredients() {
-  const available = document.getElementById('available-ingredients').value.split(',').map(s=>s.trim()).filter(Boolean);
+// Local substitution map for instant offline lookup
+const LOCAL_SUBS = {
+  "milk": ["almond milk", "soy milk", "oat milk", "coconut milk"],
+  "egg": ["banana (mashed)", "yogurt", "flaxseed + water", "applesauce"],
+  "butter": ["olive oil", "coconut oil", "avocado", "ghee"],
+  "cream": ["coconut cream", "cashew cream", "silken tofu blend"],
+  "cheese": ["nutritional yeast", "tofu ricotta", "cashew cheese"],
+  "sugar": ["honey", "maple syrup", "stevia", "jaggery"],
+  "flour": ["almond flour", "oat flour", "rice flour"],
+  "chicken": ["tofu", "paneer", "jackfruit", "mushrooms"],
+  "beef": ["portobello mushrooms", "lentils", "tempeh"],
+  "rice": ["quinoa", "cauliflower rice", "couscous"],
+  "pasta": ["zucchini noodles", "rice noodles", "spaghetti squash"],
+  "onion": ["shallots", "leeks", "scallions"],
+  "garlic": ["garlic powder", "shallots", "asafoetida"],
+  "tomato": ["red bell pepper", "canned tomatoes", "sun-dried tomatoes"],
+  "lemon": ["lime juice", "vinegar", "citric acid"],
+  "paneer": ["tofu", "halloumi", "cottage cheese"],
+  "ghee": ["butter", "coconut oil", "vegetable oil"]
+};
+
+function checkIngredients() {
+  const available = document.getElementById('available-ingredients').value.split(',').map(s=>s.trim().toLowerCase()).filter(Boolean);
   const recipe = state.currentRecipe;
-  if (!available.length) return;
-  let result;
-  try {
-    const res = await fetch(`${API}/recipes/check-ingredients`, {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({ required: recipe.ingredients, available })
-    });
-    result = await res.json();
-  } catch(e) {
-    // Offline fallback
-    const req = recipe.ingredients.map(i=>i.toLowerCase());
-    const avail = available.map(i=>i.toLowerCase());
-    const missing = req.filter(i => !avail.some(a => a.includes(i) || i.includes(a)));
-    result = { missing, substitutions: {} };
-  }
+  if (!available.length) { alert('Please enter at least one ingredient you have.'); return; }
+  if (!recipe) { alert('No recipe selected.'); return; }
+
+  // Units/quantities to strip so "2 cups sugar" becomes "sugar"
+  const unitPattern = /^[\d\/\.]+(\s*[\d\/\.]+)?\s*(cups?|tbsp?|tsp?|teaspoons?|tablespoons?|grams?|g|kg|oz|lbs?|ml|l|liters?|litres?|inch|inches|cloves?|large|small|medium|pinch|handful|bunch|slices?|pieces?|cans?|strips?|stalks?|sprigs?)?\s*/i;
+  const cleanIngredient = str => str
+    .replace(unitPattern, '')       // remove leading quantity + unit
+    .replace(/,.*$/, '')            // remove anything after comma
+    .replace(/\(.*?\)/g, '')        // remove parenthetical notes
+    .replace(/\bfinely\b|\bdiced\b|\bminced\b|\bchopped\b|\bsliced\b|\bgrated\b|\bcrushed\b|\bfresh\b|\bdried\b|\bground\b|\bcooked\b|\bpeeled\b|\bwhole\b|\bto taste\b/gi, '')
+    .trim();
+
+  // Resolve ingredient names (handle both strings and objects) and clean them
+  const required = recipe.ingredients.map(i => {
+    const raw = typeof i === 'string' ? i : (i.name || '');
+    return cleanIngredient(raw.toLowerCase());
+  }).filter(Boolean);
+
+  // Compute missing ingredients
+  const missing = required.filter(req =>
+    !available.some(a => a.includes(req) || req.includes(a) || req.split(' ').some(word => word.length > 3 && a.includes(word)))
+  );
+
+  // Look up substitutions from local map
+  const substitutions = {};
+  missing.forEach(item => {
+    for (const [key, subs] of Object.entries(LOCAL_SUBS)) {
+      if (key.includes(item) || item.includes(key) || item.split(' ').some(w => w.length > 3 && key.includes(w))) {
+        substitutions[item] = subs;
+        break;
+      }
+    }
+  });
+
   const div = document.getElementById('missing-results');
-  if (!result.missing.length) {
+  if (!div) return;
+
+  if (!missing.length) {
     div.innerHTML = `<div class="detail-section" style="text-align:center;margin-top:1rem"><h2>✅ You have all ingredients!</h2><p>Ready to cook!</p>
       <button class="btn btn-primary" style="margin-top:1rem" onclick="openCookingSteps()">👨‍🍳 Start Cooking</button></div>`;
     return;
   }
   div.innerHTML = `
     <div class="missing-section">
-      <h3 style="color:var(--pink-600);margin-bottom:1rem">⚠️ Missing Ingredients (${result.missing.length})</h3>
-      ${result.missing.map(item => {
-        const subs = (result.substitutions && result.substitutions[item]) || [];
+      <h3 style="color:var(--pink-600);margin-bottom:1rem">⚠️ Missing Ingredients (${missing.length})</h3>
+      ${missing.map(item => {
+        const subs = substitutions[item] || [];
         return `<div class="sub-card">
           <h4>❌ ${item}</h4>
           ${subs.length ? `<p style="font-size:.85rem;color:var(--text-light);margin-bottom:.5rem">Suggested substitutes:</p>
-          <div class="sub-options">${subs.map(s=>`<button class="sub-option" onclick="selectSub(this,'${item}','${s}')">${s}</button>`).join('')}</div>` : '<p style="font-size:.85rem;color:var(--text-light)">No substitutes available</p>'}
+          <div class="sub-options">${subs.map(s=>`<button class="sub-option" onclick="selectSub(this,'${item}','${s}')">${s}</button>`).join('')}</div>` : '<p style="font-size:.85rem;color:var(--text-light)">No substitutes available — please purchase</p>'}
         </div>`;
       }).join('')}
-      <div style="display:flex;gap:1rem;margin-top:1.5rem">
-          <button class="btn btn-primary" onclick="applySubstitutions()">Apply Substitutions & Cook 👨‍🍳</button>
-          <button class="btn btn-primary" style="background:var(--pink-300);color:var(--dark)" onclick='addMissingToGrocery(${JSON.stringify(result.missing)})'>🛒 Add Missing to Grocery List</button>
+      <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap">
+          <button class="btn btn-primary" onclick="applySubstitutions()">Apply Substitutions &amp; Cook 👨‍🍳</button>
+          <button class="btn btn-primary" style="background:var(--pink-300);color:var(--dark)" onclick='addMissingToGrocery(${JSON.stringify(missing)})'>🛒 Add Missing to Grocery List</button>
       </div>
     </div>`;
 }
