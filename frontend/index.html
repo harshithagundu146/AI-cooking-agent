@@ -120,70 +120,7 @@
         </div>
     </section>
 
-    <!-- ===== PREFERENCE ONBOARDING ===== -->
-    <section id="preferences-page" class="page">
-        <div class="pref-container glass-card">
-            <h1 class="section-title">Let's Personalize Your Experience</h1>
-            <p class="section-subtitle">Answer a few questions so I can recommend the best recipes for you!</p>
-            <div id="pref-steps">
-                <div class="pref-step active" data-step="1">
-                    <h2>🌶️ Spice Level</h2>
-                    <p>Do you prefer spicy or mild food?</p>
-                    <div class="pref-options">
-                        <button class="pref-btn" onclick="setPref('spice_preference','mild')">😌 Mild</button>
-                        <button class="pref-btn" onclick="setPref('spice_preference','medium')">🌶️ Medium</button>
-                        <button class="pref-btn" onclick="setPref('spice_preference','spicy')">🔥 Spicy</button>
-                    </div>
-                </div>
-                <div class="pref-step" data-step="2">
-                    <h2>😋 Taste</h2>
-                    <p>Do you prefer sweet or savory dishes?</p>
-                    <div class="pref-options">
-                        <button class="pref-btn" onclick="setPref('taste_preference','sweet')">🍰 Sweet</button>
-                        <button class="pref-btn" onclick="setPref('taste_preference','savory')">🧂 Savory</button>
-                        <button class="pref-btn" onclick="setPref('taste_preference','both')">🤤 Both!</button>
-                    </div>
-                </div>
-                <div class="pref-step" data-step="3">
-                    <h2>🌍 Cuisine</h2>
-                    <p>Which cuisines do you enjoy most?</p>
-                    <div class="pref-options cuisine-grid">
-                        <button class="pref-btn" onclick="setPref('cuisine_preference','indian')">🇮🇳 Indian</button>
-                        <button class="pref-btn" onclick="setPref('cuisine_preference','italian')">🇮🇹 Italian</button>
-                        <button class="pref-btn" onclick="setPref('cuisine_preference','mexican')">🇲🇽 Mexican</button>
-                        <button class="pref-btn" onclick="setPref('cuisine_preference','thai')">🇹🇭 Thai</button>
-                        <button class="pref-btn" onclick="setPref('cuisine_preference','mediterranean')">🫒 Mediterranean</button>
-                        <button class="pref-btn" onclick="setPref('cuisine_preference','all')">🌎 All Cuisines</button>
-                    </div>
-                </div>
-                <div class="pref-step" data-step="4">
-                    <h2>💪 Health Preference</h2>
-                    <p>What's your food style?</p>
-                    <div class="pref-options">
-                        <button class="pref-btn" onclick="setPref('health_preference','healthy')">🥗 Healthy & Clean</button>
-                        <button class="pref-btn" onclick="setPref('health_preference','balanced')">⚖️ Balanced</button>
-                        <button class="pref-btn" onclick="setPref('health_preference','fast_food')">🍔 Comfort Food</button>
-                    </div>
-                </div>
-                <div class="pref-step" data-step="5">
-                    <h2>⚠️ Allergies</h2>
-                    <p>Any ingredients you'd like to avoid?</p>
-                    <div class="pref-options allergy-grid">
-                        <button class="pref-btn toggle" data-allergy="dairy" onclick="toggleAllergy(this,'dairy')">🥛 Dairy</button>
-                        <button class="pref-btn toggle" data-allergy="nuts" onclick="toggleAllergy(this,'nuts')">🥜 Nuts</button>
-                        <button class="pref-btn toggle" data-allergy="gluten" onclick="toggleAllergy(this,'gluten')">🌾 Gluten</button>
-                        <button class="pref-btn toggle" data-allergy="soy" onclick="toggleAllergy(this,'soy')">🫘 Soy</button>
-                        <button class="pref-btn toggle" data-allergy="eggs" onclick="toggleAllergy(this,'eggs')">🥚 Eggs</button>
-                        <button class="pref-btn toggle" data-allergy="none" onclick="toggleAllergy(this,'none')">✅ None</button>
-                    </div>
-                    <button class="btn btn-primary" style="margin-top:1.5rem" onclick="savePreferences()">Save & Continue →</button>
-                </div>
-            </div>
-            <div class="pref-progress">
-                <div class="pref-progress-bar" id="pref-progress-bar"></div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- ===== CUISINE SELECTION ===== -->
     <section id="cuisine-page" class="page">

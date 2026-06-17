@@ -63,8 +63,7 @@ function logout() { state = { token:null,userId:null,username:null,isNew:false,c
 function selectCategory(cat) {
   state.category = cat;
   state.preferences.food_category = cat;
-  if (state.isNew) { navigateTo('preferences-page'); }
-  else { navigateTo('cuisine-page'); }
+  navigateTo('cuisine-page');
 }
 
 // ===== CUISINE SELECTION =====
@@ -79,48 +78,7 @@ function selectCuisine(cuisine) {
   setTimeout(() => navigateTo('recipes-page'), 300);
 }
 
-// ===== PREFERENCES =====
-let prefStep = 1;
-function setPref(key, value) {
-  state.preferences[key] = value;
-  // Highlight selected
-  const step = document.querySelector(`.pref-step[data-step="${prefStep}"]`);
-  if (step) {
-    step.querySelectorAll('.pref-btn:not(.toggle)').forEach(b => b.classList.remove('selected'));
-    event.target.classList.add('selected');
-  }
-  if (prefStep < 5) {
-    setTimeout(() => {
-      document.querySelector(`.pref-step[data-step="${prefStep}"]`).classList.remove('active');
-      prefStep++;
-      document.querySelector(`.pref-step[data-step="${prefStep}"]`).classList.add('active');
-      document.getElementById('pref-progress-bar').style.width = (prefStep * 20) + '%';
-    }, 400);
-  }
-}
 
-function toggleAllergy(btn, allergy) {
-  if (allergy === 'none') {
-    state.allergies = [];
-    document.querySelectorAll('.allergy-grid .pref-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-  } else {
-    document.querySelector('[data-allergy="none"]')?.classList.remove('selected');
-    btn.classList.toggle('selected');
-    const idx = state.allergies.indexOf(allergy);
-    if (idx > -1) state.allergies.splice(idx, 1); else state.allergies.push(allergy);
-  }
-  state.preferences.allergies = state.allergies;
-}
-
-async function savePreferences() {
-  state.preferences.user_id = state.userId;
-  try {
-    await fetch(`${API}/preferences/save`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(state.preferences) });
-  } catch(e) { /* offline mode ok */ }
-  state.isNew = false;
-  navigateTo('cuisine-page');
-}
 
 // ===== RECIPES =====
 function renderCuisineFilterBar() {
