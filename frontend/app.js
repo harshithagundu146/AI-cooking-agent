@@ -203,22 +203,25 @@ function renderRecipes(recipes, containerId = 'recipe-grid') {
 }
 
 
+let searchTimeout;
 async function searchRecipes(q) {
-  if (!q.trim()) { renderRecipes(state.recipes); return; }
-  try {
-    const res = await fetch(`${API}/recipes/search?q=${encodeURIComponent(q)}&category=${state.category||''}&user_id=${state.userId||''}`);
-    const results = await res.json();
-    // Merge search results into state.recipes so openRecipe can find them
-    results.forEach(r => {
-      if (!state.recipes.find(x => x.id === r.id)) {
-        state.recipes.push(r);
-      }
-    });
-    renderRecipes(results);
-  } catch(e) {
-    const filtered = state.recipes.filter(r => r.name.toLowerCase().includes(q.toLowerCase()));
-    renderRecipes(filtered);
-  }
+  clearTimeout(searchTimeout);
+  searchTimeout = setTimeout(async () => {
+    if (!q.trim()) { renderRecipes(state.recipes); return; }
+    try {
+      const res = await fetch(`${API}/recipes/search?q=${encodeURIComponent(q)}&category=${state.category||''}&user_id=${state.userId||''}`);
+      const results = await res.json();
+      results.forEach(r => {
+        if (!state.recipes.find(x => x.id === r.id)) {
+          state.recipes.push(r);
+        }
+      });
+      renderRecipes(results);
+    } catch(e) {
+      const filtered = state.recipes.filter(r => r.name.toLowerCase().includes(q.toLowerCase()));
+      renderRecipes(filtered);
+    }
+  }, 500); // 500ms debounce
 }
 
 
