@@ -1,6 +1,6 @@
 /* ===== AI Cooking Agent — Frontend Logic ===== */
 const API = '/api';
-let state = { token:null, userId:null, username:null, isNew:false, category:null, preferences:{}, currentRecipe:null, recipes:[], selectedSubs:{}, allergies:[], selectedCuisine:'All', groceryList:[] };
+let state = { token:null, userId:null, username:null, isNew:false, category:null, preferences:{}, currentRecipe:null, recipes:[], selectedSubs:{}, allergies:[], selectedCuisine:'All', groceryList:[], spiceLevel:'Medium' };
 
 // ===== NAVIGATION =====
 function navigateTo(pageId) {
@@ -276,8 +276,19 @@ async function openRecipe(id) {
       <div class="servings-people" id="servings-people">${'👤'.repeat(Math.min(10, state.servings))}${state.servings > 10 ? '...' : ''}</div>
     </div>
     <div class="detail-section">
-      <h2>🧾 Ingredients</h2>
-      <ul class="ingredient-list" id="ingredient-list">${(recipe.ingredients||[]).map(i=>`<li>${scaleIngredientQuantity(i, 1)}</li>`).join('')}</ul>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.5rem;">
+        <h2 style="margin:0;">🧾 Ingredients</h2>
+        ${isSpicyRecipe(recipe) ? `
+        <div class="spice-adjuster" style="display:flex; align-items:center; gap:.5rem;">
+          <span style="font-size:.9rem; font-weight:600; color:var(--text-light);">Spice Level:</span>
+          <select id="spice-selector" onchange="adjustSpice(this.value)" style="padding:.25rem .5rem; border-radius:var(--radius-sm); border:1px solid var(--pink-200); background:var(--pink-50); color:var(--pink-700); font-weight:500; cursor:pointer;">
+            <option value="Mild" ${state.spiceLevel === 'Mild' ? 'selected' : ''}>😌 Mild</option>
+            <option value="Medium" ${state.spiceLevel === 'Medium' ? 'selected' : ''}>🌶️ Medium</option>
+            <option value="Spicy" ${state.spiceLevel === 'Spicy' ? 'selected' : ''}>🔥 Spicy</option>
+          </select>
+        </div>` : ''}
+      </div>
+      <ul class="ingredient-list" id="ingredient-list">${(recipe.ingredients||[]).map(i=>`<li>${scaleIngredientQuantity(i, state.servings / state.baseServings)}</li>`).join('')}</ul>
     </div>
     <div class="detail-section">
       <h2>📊 Nutrition Per Serving</h2>
@@ -299,11 +310,36 @@ async function openRecipe(id) {
   navigateTo('recipe-detail-page');
 }
 
+function isSpicyRecipe(recipe) {
+  if (recipe.tags && recipe.tags.includes('spicy')) return true;
+  if (recipe.category === 'dessert' || (recipe.tags && recipe.tags.includes('sweet'))) return false;
+  
+  const spicyIngredients = ['chili', 'chilli', 'pepper', 'jalapeno', 'masala', 'paprika', 'cayenne', 'curry'];
+  const hasSpicy = (recipe.ingredients || []).some(ing => {
+    const itemStr = (typeof ing === 'string' ? ing : (ing.item || '')).toLowerCase();
+    return spicyIngredients.some(s => itemStr.includes(s));
+  });
+  return hasSpicy;
+}
+
+function adjustSpice(level) {
+  state.spiceLevel = level;
+  updateServings(state.servings); // Re-render ingredients
+}
+
 function scaleIngredientQuantity(ing, scale) {
   let str = typeof ing === 'string' ? ing : (ing.item || '');
   let imgHtml = typeof ing === 'string' || !ing.image ? '' : `<img src="${ing.image}" class="ingredient-img" onerror="this.style.display='none'">`;
   
-  if (scale === 1) return `${imgHtml} <span>${str}</span>`;
+  // Apply spice level scaling
+  let finalScale = scale;
+  const isSpicy = ['chili', 'chilli', 'pepper', 'jalapeno', 'masala', 'paprika', 'cayenne', 'hot sauce'].some(s => str.toLowerCase().includes(s));
+  if (isSpicy && state.spiceLevel) {
+     if (state.spiceLevel === 'Mild') finalScale *= 0.5;
+     else if (state.spiceLevel === 'Spicy') finalScale *= 1.5;
+  }
+  
+  if (finalScale === 1) return `${imgHtml} <span>${str}</span>`;
   
   let newStr = str.replace(/^([\d\/\.]+)\s*/, (match, numStr) => {
     let num;
@@ -314,7 +350,7 @@ function scaleIngredientQuantity(ing, scale) {
       num = parseFloat(numStr);
     }
     if (isNaN(num)) return match;
-    let scaled = num * scale;
+    let scaled = num * finalScale;
     if (scaled % 1 !== 0) {
       if (Math.abs(scaled - 0.25) < 0.01) scaled = '1/4';
       else if (Math.abs(scaled - 0.33) < 0.01) scaled = '1/3';
@@ -328,6 +364,7 @@ function scaleIngredientQuantity(ing, scale) {
   
   return `${imgHtml} <span>${newStr}</span>`;
 }
+
 
 function updateServings(newServings) {
   state.servings = newServings;
